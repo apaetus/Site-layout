@@ -1,0 +1,57 @@
+body {
+    background-image: linear-gradient(#022335, #043a41);
+    margin: 0;
+}
+
+header {
+    position: relative;
+    left: 360px;
+    top: 46px;
+    height: 86px;
+    width: 287px;
+}
+
+.telephone {
+    position: absolute;
+    display: inline;
+    top: 72px;
+    left: 1354px;
+    width: 206px;
+    height: 28px;
+}
+
+.tel_logo {
+    height: 25px;
+    vertical-align: middle;
+}
+
+.phone_number {
+    color: white;
+    font-size: 18px;
+}
+
+main {
+    display: flex;
+}
+
+.left_section {
+    width: 50%;
+}
+
+.right_section {
+    height: 726px;
+    width: 50%;
+    background-image: url('src/Neuron_bck.png');
+}
+
+.welcome {
+    color: #747d81;
+}
+
+h1 {
+    font-size: 108px;
+    color: white;
+}
+p {
+    color: white;
+}
