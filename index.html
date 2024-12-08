@@ -7,26 +7,35 @@
             content="width=device-width, initial-scale=1.0"
         />
         <link href="style.css" rel="stylesheet" />
+        <link href="reset.css" rel="stylesheet" />
         <title>VeraVla</title>
     </head>
     <body>
-        <header>
-            <img
-                src="src/Лого.png"
-                alt="VeraVla edu logo"
-                class="VeraVla-logo"
-            />
-            <div class="telephone">
+        <div class="content-container">
+            <header class="header">
                 <img
-                    src="src/Vector phone.png"
-                    alt="phone"
-                    class="tel_logo"
+                    src="src/Logo.png"
+                    alt="VeraVla edu logo"
+                    class="VeraVla-logo"
+                    height="86px"
                 />
-                <span class="phone_number">+82 (10) 7526-9192</span>
-            </div>
-        </header>
-        <main>
-            <aside>
+                <div class="telephone">
+                    <img
+                        src="src/Vector_phone.svg"
+                        alt="phone"
+                        class="tel_logo"
+                        height="23px"
+                        width="23px"
+                    />
+                    <span class="phone_number"
+                        >+82 (10) 7526-9192</span
+                    >
+                </div>
+            </header>
+        </div>
+
+        <main class="first-page">
+            <!-- <aside>
                 <a href="#">
                     <div class="consultation-container">
                         <div class="outer-circle">
@@ -43,36 +52,156 @@
                         </p>
                     </div>
                 </a>
-            </aside>
-            <section class="base-section">
+            </aside> -->
+            <section class="content-container greetings">
                 <div class="info">
                     <p class="welcome">
                         Добро пожаловать в онлайн школу
                     </p>
                     <h1>VeraVla edu!</h1>
-                    <p>
+                    <p class="motivation-text">
                         Переквалифицируйся в разработчика
                         искусственного интеллекта и получи
                         высокооплачиваемую работу
                     </p>
-                    <p>Мы обучаем с гарантией!</p>
-                    <p>
-                        Первый месяц действует гарантия 100% возврата
-                        денег, если тебя не устроят наши курсы
-                    </p>
-                    <img src="src/Vector.png" alt="education" />
-                    <p><b>Мы обучаем в гарантией!</b></p>
-                    <p class="guarantee-text">
-                        Первый месяц действует гарантия 100% возврата
-                        денег, если тебя не устроят наши курсы
-                    </p>
+
+                    <div class="guarantee-container">
+                        <div class="vector-education">
+                            <img
+                                src="src/Vector.svg"
+                                alt="education"
+                                class="img-edu"
+                                height="39px"
+                                width="39px"
+                            />
+                        </div>
+
+                        <div class="text-container">
+                            <p class="guarantee-edu-text">
+                                <b>Мы обучаем с гарантией!</b>
+                            </p>
+                            <p class="guarantee-text">
+                                Первый месяц действует гарантия 100%
+                                возврата <br />
+                                денег, если тебя не устроят наши курсы
+                            </p>
+                        </div>
+                    </div>
+
                     <button class="light-button">
                         ЗАПИСАТЬСЯ НА ОЗНАКОМИТЕЛЬНЫЙ ВЕБИНАР
                     </button>
                 </div>
-                <div class="scroll-down">
+                <!-- <div class="scroll-down">
                     <div class="switch-button"></div>
                     <p>листайте вниз</p>
+                </div> -->
+            </section>
+        </main>
+
+        <main second-page>
+            <section class="content-container seven-reasons">
+                <h2>
+                    <span class="blue-text">7 ПРИЧИН</span> ПОЧЕМУ
+                    <br />ИМЕННО МЫ?
+                </h2>
+                <div class="reasons">
+                    <div class="reason box1">
+                        <img
+                            src="/src/Vector3.svg"
+                            alt="specialist"
+                            width="40px"
+                            height="42px"
+                            class="reason-vector reason-vector1"
+                        />
+                        <p class="reason-text reason-text1">
+                            Ты станешь востребованным специалистом в
+                            области искусственного интеллекта
+                        </p>
+                    </div>
+                    <div class="reason box2">
+                        <img
+                            src="/src/Vector (1).svg"
+                            alt="models"
+                            width="44px"
+                            height="44px"
+                            class="reason-vector reason-vector2"
+                        />
+                        <p class="reason-text reason-text2">
+                            Будешь создавать свои модели
+                            искусственного интеллекта на языке
+                            программирования Python
+                        </p>
+                    </div>
+                    <div class="reason box3">
+                        <img
+                            src="/src/Vector (2).svg"
+                            alt="programs"
+                            width="42px"
+                            height="42px"
+                            class="reason-vector reason-vector3"
+                        />
+                        <p class="reason-text reason-text3">
+                            Сумеешь создавать программы, связанные<br />
+                            с компьютерным зрением и нейронными
+                            сетями.
+                        </p>
+                    </div>
+                    <div class="reason box4">
+                        <img
+                            src="/src/Vector (3).svg"
+                            alt="edu"
+                            width="40px"
+                            height="50px"
+                            class="reason-vector reason-vector4"
+                        />
+                        <p class="reason-text reason-text4">
+                            Мы обучаем только тому, что тебе
+                            пригодится <br />во время работы!
+                        </p>
+                    </div>
+                    <div class="reason box5">
+                        <img
+                            src="/src/Vector (4).svg"
+                            alt="people"
+                            width="50px"
+                            height="38px"
+                            class="reason-vector reason-vector5"
+                        />
+                        <p class="reason-text reason-text5">
+                            Ты найдешь единомышленников, <br />с
+                            которыми сможешь создавать свои проекты
+                        </p>
+                    </div>
+                    <div class="reason box6">
+                        <img
+                            src="/src/Vector (5).svg"
+                            alt="community"
+                            width="50px"
+                            height="50px"
+                            class="reason-vector reason-vector6"
+                        />
+                        <p class="reason-text reason-text6">
+                            Мы создаём сообщество профессионалов,
+                            таких же как и мы, жаждущих развивать и
+                            изменять этот мир к лучшему с помощью IT
+                            технологий
+                        </p>
+                    </div>
+                    <div class="reason box7">
+                        <img
+                            src="/src/Vector (6).svg"
+                            alt="career"
+                            width="44px"
+                            height="44px"
+                            class="reason-vector reason-vector7"
+                        />
+                        <p class="reason-text reason-text7">
+                            После успешного завершения курса, мы
+                            поможем тебе трудоустроиться <br />в
+                            Южнокорейские IT компании!
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>

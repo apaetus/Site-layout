@@ -5,24 +5,16 @@ body {
     margin: 0;
 }
 
-header {
-    height: 133px;
+.header {
+    padding-top: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.VeraVla-logo {
-    position: absolute;
-    height: 86px;
-    top: 46px;
-    left: 20%;
-}
-
-.telephone {
-    position: absolute;
-    display: inline;
-    top: 72px;
-    right: 20%;
-    width: 206px;
-    height: 28px;
+.content-container {
+    margin: 0 auto;
+    width: 1200px;
 }
 
 .tel_logo {
@@ -33,10 +25,15 @@ header {
 .phone_number {
     color: white;
     font-size: 18px;
+    font-family: 'Avenir Next Cyr Medium';
 }
 
 main {
     display: flex;
+}
+
+.first-page {
+    height: 873px;
 }
 
 aside {
@@ -86,6 +83,10 @@ a {
     font-size: 10px;
 }
 
+.greetings {
+    margin-top: 155px;
+}
+
 .base-section {
     display: flex;
     justify-content: left;
@@ -96,33 +97,72 @@ a {
     background-size: 49% auto;
 }
 
-.info {
-    width: 50%;
-}
-
 .welcome {
     color: #747d81;
+    font-family: 'Avenir Next Cyr Medium';
+    font-size: 18px;
+    font-weight: 600;
 }
 
 h1 {
-    font-size: 108px;
+    font-family: 'Avenir Next Cyr';
+    font-size: 102px;
     color: white;
-    margin: 15px auto;
+    margin: 0 auto;
+    letter-spacing: 3.6px;
 }
-p {
-    color: white;
+
+.motivation-text {
+    width: 580px;
+    margin-top: 15px;
+    padding-bottom: 8px;
+}
+
+.guarantee-container {
+    margin: 77px 0;
+    display: flex;
+    flex-direction: row;
+    height: 89px;
+}
+
+.vector-education {
+    width: 71px;
+    height: 71px;
+    background-image: url(src/Rectangle_edu.svg);
+}
+
+.img-edu {
+    padding: 18px 16px 14px 16px;
+}
+
+.text-container {
+    align-self: center;
+    padding-left: 33px;
+    height: 86px;
+}
+
+.guarantee-edu-text {
+    letter-spacing: 0.5px;
 }
 
 .guarantee-text {
-    color: #4abcec;
+    color: #00e0ff;
+    padding-top: 11px;
 }
 
 .light-button {
+    margin-top: 24px;
     width: 479px;
     height: 60px;
     color: white;
-    background-color: #00e0ff;
+    background-color: #03e1ffa8;
     border-radius: 9px;
+    border-width: 0;
+    font-family: 'Avenir Next Cyr Medium';
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 14.7px;
+    letter-spacing: 0.27em;
 }
 
 .scroll-down {
@@ -157,4 +197,126 @@ p {
     background-color: #4abcec;
     top: 4px;
     left: 4px;
+}
+
+.second-page {
+    height: 881px;
+}
+
+h2 {
+    margin: 125px 0 50px;
+    font-family: 'Avenir Next Cyr';
+    font-size: 54px;
+    font-weight: 450;
+    color: #ffffff;
+}
+
+.blue-text {
+    color: #49bceb;
+}
+
+.reasons {
+    height: 449px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        'box1 box1 box1 box2 box2 box2 box3 box3 box3 box4 box4 box4'
+        'box5 box5 box5 box5 box6 box6 box6 box6 box7 box7 box7 box7';
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.box1 {
+    grid-area: box1;
+}
+
+.box2 {
+    grid-area: box2;
+}
+.box3 {
+    grid-area: box3;
+}
+
+.box4 {
+    grid-area: box4;
+}
+
+.box5 {
+    grid-area: box5;
+}
+
+.box6 {
+    grid-area: box6;
+}
+
+.box7 {
+    grid-area: box7;
+}
+
+.reason {
+    border: 2px solid #49b9e8;
+    border-radius: 20px;
+}
+
+.reason-vector1 {
+    padding: 40px 44px 0;
+}
+
+.reason-text1 {
+    padding: 14px 40px;
+}
+
+.reason-vector2 {
+    padding: 39px 42px 0;
+}
+
+.reason-text2 {
+    padding: 13px 40px;
+}
+
+.reason-vector3 {
+    padding: 40px 43px 0;
+}
+
+.reason-text3 {
+    padding: 15px 35px 0 40px;
+}
+
+.reason-vector4 {
+    padding: 32px 45px 0;
+}
+
+.reason-text4 {
+    padding: 15px 35px 0 40px;
+}
+
+.reason-vector5 {
+    padding: 46px 39px 0;
+}
+
+.reason-text5 {
+    padding: 16px 35px 0 40px;
+}
+
+.reason-vector6 {
+    padding: 34px 41px 0;
+}
+
+.reason-text6 {
+    padding: 15px 37px 0 39px;
+}
+
+.reason-vector7 {
+    padding: 37px 44px 0;
+}
+
+.reason-text7 {
+    padding: 19px 38px;
+}
+
+.reason-text {
+    font-family: 'Avenir Next Cyr';
+    font-size: 15px;
+    font-weight: 450;
+    line-height: 18.38px;
 }
