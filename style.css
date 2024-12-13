@@ -5,6 +5,34 @@ body {
     margin: 0;
 }
 
+main {
+    box-shadow: inset -24px 0px 24px 0px rgba(0, 224, 255, 0.3),
+        inset -24px 4px 15px 0px rgba(74, 217, 236, 0.3),
+        inset -24px 3px 15px 0px rgba(0, 224, 255, 0.23);
+
+    border-bottom: 2px solid;
+
+    border-image-source: linear-gradient(
+        270deg,
+        rgba(74, 207, 236, 0.21) 0%,
+        #32abc3 53.12%,
+        rgba(74, 197, 236, 0.23) 100%
+    );
+    border-image-slice: 1;
+}
+
+.odd-main {
+    background: linear-gradient(
+        286.41deg,
+        #022335 3.63%,
+        #043a41 90.98%
+    );
+}
+
+.even-main {
+    background: linear-gradient(45deg, #021c2b 3.63%, #0a2b30 90.98%);
+}
+
 .header {
     padding-top: 46px;
     display: flex;
@@ -28,12 +56,12 @@ body {
     font-family: 'Avenir Next Cyr';
 }
 
-main {
+/* main {
     display: flex;
-}
+} */
 
 .first-page {
-    height: 873px;
+    height: 1003px;
 }
 
 aside {
@@ -126,7 +154,7 @@ h1 {
 .vector-education {
     width: 71px;
     height: 71px;
-    background-image: url(src/Rectangle_edu.svg);
+    background-image: url(src/assets/img/icons/bckgrnd.svg);
 }
 
 .img-edu {
@@ -153,7 +181,11 @@ h1 {
     width: 479px;
     height: 60px;
     color: white;
-    background-color: #03e1ffa8;
+    background: linear-gradient(
+        180deg,
+        rgba(3, 225, 255, 0.66) 0%,
+        #13cdc2 100%
+    );
     border-radius: 9px;
     border-width: 0;
     font-family: 'Avenir Next Cyr';
@@ -162,6 +194,7 @@ h1 {
     line-height: 14.7px;
     letter-spacing: 0.27em;
     cursor: pointer;
+    box-shadow: 0px 7px 20px -7px #00e0ff;
 }
 
 .scroll-down {
@@ -199,7 +232,7 @@ h1 {
 }
 
 .second-page {
-    height: 863px;
+    height: 862px;
     padding-top: 18px;
 }
 
@@ -256,7 +289,7 @@ h2 {
 
 .reason {
     height: 100%;
-    background: linear-gradient(#022335, #043a41);
+    background: linear-gradient(180deg, #053740 0%, #042e3c 100%);
     border-radius: 20px;
 }
 
@@ -271,59 +304,59 @@ h2 {
 }
 
 .reason-vector1 {
-    padding: 42px 47px 0;
+    padding: 40px 45px 0;
 }
 
 .reason-text1 {
-    padding: 15px 42px;
+    padding: 15px 40px;
 }
 
 .reason-vector2 {
-    padding: 42px 45px 0;
+    padding: 40px 43px 0;
 }
 
 .reason-text2 {
-    padding: 13px 42px;
+    padding: 13px 40px;
 }
 
 .reason-vector3 {
-    padding: 42px 46px 0;
+    padding: 40px 42px 0;
 }
 
 .reason-text3 {
-    padding: 15px 35px 0 42px;
+    padding: 15px 35px 0 40px;
 }
 
 .reason-vector4 {
-    padding: 34px 47px 0;
+    padding: 32px 45px 0;
 }
 
 .reason-text4 {
-    padding: 15px 35px 0 42px;
+    padding: 15px 35px 0 40px;
 }
 
 .reason-vector5 {
-    padding: 48px 42px 0;
+    padding: 45px 40px 0;
 }
 
 .reason-text5 {
-    padding: 16px 42px 0;
+    padding: 16px 40px 0;
 }
 
 .reason-vector6 {
-    padding: 36px 44px 0;
+    padding: 34px 42px 0;
 }
 
 .reason-text6 {
-    padding: 15px 41px 0;
+    padding: 15px 39px 0;
 }
 
 .reason-vector7 {
-    padding: 40px 46px 0;
+    padding: 38px 44px 0;
 }
 
 .reason-text7 {
-    padding: 18px 42px;
+    padding: 17px 40px;
 }
 
 .reason-text {
@@ -379,7 +412,7 @@ h2 {
 }
 
 .fourth-page {
-    height: 809px;
+    height: 807px;
 }
 
 .importants {
@@ -467,7 +500,7 @@ h2 {
 }
 
 .fifth-page {
-    height: 891px;
+    height: 889px;
 }
 
 .advantage {
@@ -521,7 +554,7 @@ h2 {
 }
 
 .sixth-page {
-    height: 2182px;
+    height: 2180px;
 }
 
 .chapters {
@@ -682,7 +715,7 @@ h4 {
 }
 
 .seventh-page {
-    height: 736px;
+    height: 734px;
 }
 
 .about-author {
