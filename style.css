@@ -200,11 +200,12 @@ h1 {
 }
 
 .second-page {
-    height: 881px;
+    height: 863px;
+    padding-top: 18px;
 }
 
 h2 {
-    margin: 125px 0 50px;
+    margin: 107px 0 20px;
     font-family: 'Avenir Next Cyr';
     font-size: 54px;
     font-weight: 450;
@@ -216,6 +217,7 @@ h2 {
 }
 
 .reasons {
+    padding-top: 30px;
     height: 449px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -254,64 +256,86 @@ h2 {
 }
 
 .reason {
-    border: 2px solid #49b9e8;
+    /* position: relative; */
+    background: linear-gradient(
+        180deg,
+        rgba(0, 224, 255, 0.11) 0%,
+        rgba(0, 224, 255, 0.0539) 100%
+    );
+    /* box-shadow: 0 0 20px #03e1ffa8; */
+
     border-radius: 20px;
 }
 
+/* .reason::before {
+    position: absolute;
+    content: '';
+    inset: -2px;
+    padding: 2px;
+
+    background: radial-gradient(
+        47.54% 111.62% at 50% 50%,
+        #49b9e8 0%,
+        rgba(31, 77, 96, 0.43) 100%
+    );
+    border-image-slice: 1;
+    border-radius: 20px; */
+/* } */
+
 .reason-vector1 {
-    padding: 40px 44px 0;
+    padding: 42px 47px 0;
 }
 
 .reason-text1 {
-    padding: 14px 40px;
+    padding: 15px 42px;
 }
 
 .reason-vector2 {
-    padding: 39px 42px 0;
+    padding: 42px 45px 0;
 }
 
 .reason-text2 {
-    padding: 13px 40px;
+    padding: 13px 42px;
 }
 
 .reason-vector3 {
-    padding: 40px 43px 0;
+    padding: 42px 46px 0;
 }
 
 .reason-text3 {
-    padding: 15px 35px 0 40px;
+    padding: 15px 35px 0 42px;
 }
 
 .reason-vector4 {
-    padding: 32px 45px 0;
+    padding: 34px 47px 0;
 }
 
 .reason-text4 {
-    padding: 15px 35px 0 40px;
+    padding: 15px 35px 0 42px;
 }
 
 .reason-vector5 {
-    padding: 46px 39px 0;
+    padding: 48px 42px 0;
 }
 
 .reason-text5 {
-    padding: 16px 35px 0 40px;
+    padding: 16px 42px 0;
 }
 
 .reason-vector6 {
-    padding: 34px 41px 0;
+    padding: 36px 44px 0;
 }
 
 .reason-text6 {
-    padding: 15px 37px 0 39px;
+    padding: 15px 41px 0;
 }
 
 .reason-vector7 {
-    padding: 37px 44px 0;
+    padding: 40px 46px 0;
 }
 
 .reason-text7 {
-    padding: 19px 38px;
+    padding: 18px 42px;
 }
 
 .reason-text {
@@ -319,4 +343,358 @@ h2 {
     font-size: 15px;
     font-weight: 450;
     line-height: 18.38px;
+}
+
+.third-page {
+    height: 901px;
+    padding-top: 12px;
+}
+
+.arguments {
+    width: 689px;
+    padding-top: 32px;
+    margin-bottom: 45px;
+}
+
+.argument {
+    display: flex;
+    margin-top: 5px;
+    padding: 10px 0 0 24px;
+    background: linear-gradient(
+        90deg,
+        rgba(31, 63, 77, 0.53) 52.08%,
+        rgba(31, 75, 94, 0) 100%
+    );
+}
+
+.argument-text {
+    font-size: 15px;
+    font-weight: 450;
+    line-height: 21px;
+    padding-top: 7px;
+    padding-left: 19px;
+}
+
+.first-argument {
+    height: 51px;
+}
+
+.second-argument {
+    height: 108px;
+}
+
+.third-argument {
+    height: 84px;
+}
+
+.fourth-argument {
+    height: 70px;
+}
+
+.fourth-page {
+    height: 809px;
+}
+
+.importants {
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.first-important {
+    overflow: hidden;
+    padding: 2px 0 0 2px;
+    display: flex;
+    width: 568px;
+    height: 203px;
+    border-radius: 20px;
+}
+
+.first-important img {
+    margin-left: -285px;
+    border-radius: 20px;
+}
+
+.first-important p {
+    padding: 35px 0 0 18px;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 23px;
+}
+
+.second-important {
+    display: flex;
+    width: 568px;
+    height: 203px;
+    border-radius: 20px;
+}
+
+.second-important img {
+    border-radius: 20px;
+}
+
+.second-important p {
+    padding: 35px 0 0 18px;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 23px;
+}
+
+.third-important {
+    padding: 25px 0 0 50px;
+    display: flex;
+    width: 568px;
+    height: 203px;
+    border-radius: 20px;
+}
+
+.third-important img {
+    border-radius: 20px;
+}
+
+.third-important p {
+    padding: 17px 45px 0 0;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 23px;
+}
+
+.fourth-important {
+    padding: 25px 0 0 45px;
+    display: flex;
+    width: 568px;
+    height: 203px;
+    border-radius: 20px;
+}
+
+.fourth-important img {
+    border-radius: 20px;
+}
+
+.fourth-important p {
+    padding: 17px 57px 0 0;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 23px;
+}
+
+.fifth-page {
+    height: 891px;
+}
+
+.advantage {
+    display: flex;
+    padding-left: 3px;
+}
+
+.advantage p {
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 23px;
+}
+
+.first-advantage {
+    padding-top: 10px;
+    margin-bottom: 22px;
+    padding-left: 3px;
+}
+
+.first-advantage p {
+    padding: 13px 0 0 20px;
+}
+
+.second-advantage {
+    margin-bottom: 18px;
+}
+
+.second-advantage p {
+    padding: 13px 0 0 20px;
+}
+
+.third-advantage {
+    margin-bottom: 40px;
+}
+
+.third-advantage p {
+    padding: 10px 0 0 20px;
+}
+
+.fourth-advantage {
+    margin-bottom: 16px;
+}
+
+.fourth-advantage p {
+    padding: 10px 0 0 20px;
+}
+
+.fifth-advantage p {
+    padding: 10px 0 0 20px;
+    margin-bottom: 25px;
+}
+
+.sixth-page {
+    height: 2182px;
+}
+
+.chapters {
+    margin-bottom: 33px;
+}
+
+.text-parts {
+    margin-bottom: 26px;
+}
+
+.parts {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    background: linear-gradient(
+        286.41deg,
+        #073447 3.63%,
+        #08262b 90.98%
+    );
+    height: 56px;
+    border-radius: 6px;
+}
+
+.part-circle {
+    margin: auto 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #00e0ff 0%, #4a8bec 100%);
+}
+
+h3 {
+    margin: auto 3px;
+    color: white;
+    font-family: 'Avenir Next Cyr';
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 21px;
+}
+
+h3 span {
+    font-size: 15px;
+    font-weight: 450;
+    line-height: 21px;
+    color: #088f95;
+}
+
+.number-circle {
+    display: flex;
+    width: 27px;
+    height: 27px;
+    background: #4abcec;
+    align-items: center;
+    justify-content: center;
+    border-radius: 27px;
+    font-family: 'Avenir Next Cyr Medium';
+
+    font-size: 14px;
+    font-weight: 750;
+    /* line-height: 21px; */
+    color: #08262b;
+}
+
+h4 {
+    margin: 0 0 15px 0;
+    font-family: 'Avenir Next Cyr Medium';
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 21px;
+    color: #4abcec;
+}
+
+.chapter-text {
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 21px;
+}
+
+.first-chapter {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.second-chapter {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.third-chapter {
+    margin-top: 38px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.fourth-chapter {
+    margin-top: 43px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.fifth-chapter {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.sixth-chapter {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.seventh-chapter {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.eighth-chapter {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.ninth-chapter {
+    margin-top: 41px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.tenth-chapter {
+    margin-top: 41px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.eleventh-chapter {
+    margin: 41px 0 43px 0;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+}
+
+.seventh-page {
+    height: 736px;
+}
+
+.about-author {
+    margin-top: 37px;
+    width: 488px;
+}
+
+.about-author p {
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 450;
+    line-height: 24px;
+}
+
+.eighth-page {
+    height: 695px;
 }
