@@ -1,6 +1,12 @@
 @font-face {
-    font-family: 'Avenir Next Cyr Medium';
-    src: url(src/assets/font/Avenir-Next-Cyr-Medium/AvenirNextCyrMedium.ttf);
+    font-family: 'Avenir Next Cyr';
+    src: url('src/assets/font/Avenir-Next-Cyr-Medium/AvenirNextCyr-Medium.woff2')
+            format('woff2'),
+        url('src/assets/font/Avenir-Next-Cyr-Medium/AvenirNextCyr-Medium.woff')
+            format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 p {
@@ -8,5 +14,5 @@ p {
     padding: 0;
     font-size: 18px;
     color: white;
-    font-family: 'Avenir Next Cyr Medium';
+    font-family: 'Avenir Next Cyr';
 }
