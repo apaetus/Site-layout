@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Avenir Next Cyr Medium';
+    src: url(src/assets/font/Avenir-Next-Cyr-Medium/AvenirNextCyrMedium.ttf);
+}
+
 p {
     margin: 0;
     padding: 0;
