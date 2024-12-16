@@ -24,11 +24,11 @@
                         <img
                             src="src/assets/img/icons/phone.svg"
                             alt="phone"
-                            class="tel_logo"
+                            class="tel-logo"
                             height="23px"
                             width="23px"
                         />
-                        <span class="phone_number"
+                        <span class="phone-number"
                             >+82 (10) 7526-9192</span
                         >
                     </div>
@@ -456,246 +456,325 @@
                     <p class="text-parts">
                         Полностью весь курс состоит из 3 частей
                     </p>
-                    <div class="parts">
-                        <div class="part-circle"></div>
-                        <h3 class="parts-header">
-                            AI - Junior Level.
-                            <span> Продолжительность 1 год</span>
-                        </h3>
-                        <button class="accordion-btn">
-                            <div class="content-btn">
-                                <img
-                                    src="src/assets/img/icons/chevron.svg"
-                                    alt="chevron"
-                                    width="15px"
-                                    height="10px"
-                                />
+                    <div class="part-container">
+                        <div class="first-part part">
+                            <div class="part-circle"></div>
+                            <div class="parts-header">
+                                AI - Junior Level.
+                                <span class="duration">
+                                    Продолжительность 1 год</span
+                                >
                             </div>
-                        </button>
-                    </div>
-                    <div class="first-chapter">
-                        <div class="number-circle">1</div>
-                        <div>
-                            <h4>Введение.</h4>
-                            <p class="chapter-text">
-                                В этой секции, мы познакомимся с
-                                историей человека, который
-                                переквалифицировался в специалиста по
-                                искусственному интеллекту и отвечаем
-                                на вопрос: "Стоит ли это того, чтобы
-                                потратить 2 года на изучение
-                                искусственного интеллекта?" Также, мы
-                                разберём уроки, усвоенные
-                                специалистами, прошедших путь от
-                                младших до главных специалистов.
-                            </p>
+                            <button
+                                class="accordion-btn"
+                                id="accordionBtn"
+                            >
+                                <div class="content-btn">
+                                    <img
+                                        src="src/assets/img/icons/chevron-close.svg"
+                                        alt="chevron"
+                                        width="16px"
+                                        height="10px"
+                                    />
+                                </div>
+                            </button>
+                        </div>
+                        <div class="part-content">
+                            <div class="first-chapter">
+                                <div class="number-circle">1</div>
+                                <div>
+                                    <h4>Введение.</h4>
+                                    <p class="chapter-text">
+                                        В этой секции, мы познакомимся
+                                        с историей человека, который
+                                        переквалифицировался в
+                                        специалиста по искусственному
+                                        интеллекту и отвечаем на
+                                        вопрос: "Стоит ли это того,
+                                        чтобы потратить 2 года на
+                                        изучение искусственного
+                                        интеллекта?" Также, мы
+                                        разберём уроки, усвоенные
+                                        специалистами, прошедших путь
+                                        от младших до главных
+                                        специалистов.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="second-chapter">
+                                <div class="number-circle">2</div>
+                                <div>
+                                    <h4>
+                                        Введение в программирование.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        Эта секция начинается с
+                                        объяснения понятий проблемы,
+                                        сути и целей искусственного
+                                        интеллекта. Ты узнаешь в чем
+                                        разница между данными и
+                                        информацией. А также что такое
+                                        качество информации. Мы
+                                        разберём, что такое алгоритмы,
+                                        компьютерные программы и язык
+                                        программирования Python, и
+                                        начнём работать в
+                                        интегрированной среде
+                                        разработки для языка Python.
+                                        Далее мы поймем суть
+                                        переменных их свойства и типы.
+                                        Именно с этой секции ты
+                                        начнёшь писать свои первые
+                                        программные коды на языке
+                                        программирования Python. Мы
+                                        изучим все аспекты этого
+                                        удивительного языка. Далее мы
+                                        разберём такие библиотеки как
+                                        Numpy, Pandas и Matplotlib. В
+                                        этой секции ты познакомишься
+                                        со средой разработки Jupyter
+                                        Notebook.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="third-chapter">
+                                <div class="number-circle">3</div>
+                                <div>
+                                    <h4>
+                                        Введение в искусственный
+                                        интеллект.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        Эта секция показывает нам,
+                                        разницу между линейным и
+                                        нелинейным программированием.
+                                        Описывает процесс получение
+                                        знаний. Также, ты узнаешь, в
+                                        чем разница между AI, machine
+                                        learning и deep learning.
+                                        Также обсудим виды
+                                        искусственного интеллекта, его
+                                        применения и примеры.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="fourth-chapter">
+                                <div class="number-circle">4</div>
+                                <div>
+                                    <h4>
+                                        Алгоритм machine learning.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        В этих секциях, мы подробно
+                                        разберём работу алгоритмов
+                                        machine learning. И ты создашь
+                                        очень простую, но уже свою
+                                        модель искусственного
+                                        интеллекта. Также ты научишься
+                                        оценивать точность моделей. В
+                                        этой секции мы подробно начнём
+                                        разбирать одну из библиотек
+                                        искусственного интеллекта
+                                        scikit learn. Здесь же мы
+                                        разберём другую среду
+                                        разработки, которая называется
+                                        spyder.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="fifth-chapter">
+                                <div class="number-circle">5</div>
+                                <div>
+                                    <h4>
+                                        Процесс разработки модели
+                                        искусственного интеллекта и
+                                        инженерия данных.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        Здесь мы подробно обсудим весь
+                                        процесс разработки модели
+                                        искусственного интеллекта.
+                                        Также мы начнём изучение
+                                        анализа данных и их обработки
+                                        для обучения искусственного
+                                        интеллекта. В этой секции я
+                                        научу тебя практическим
+                                        примерам анализа и обработки
+                                        данных от А до Я.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="sixth-chapter">
+                                <div class="number-circle">6</div>
+                                <div>
+                                    <h4>Отбор фичей.</h4>
+                                    <p class="chapter-text">
+                                        В этой секции из всех данных,
+                                        что у нас есть, мы научимся
+                                        отбирать только те, что нам
+                                        нужны для обучения
+                                        искусственного интеллекта.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="seventh-chapter">
+                                <div class="number-circle">7</div>
+                                <div>
+                                    <h4>
+                                        Чек лист почти для всех
+                                        проектов искусственного
+                                        интеллекта.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        В этой секции я дам чек лист
+                                        действий для построения
+                                        end-to-end проектов
+                                        искусственного интеллекта.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="eighth-chapter">
+                                <div class="number-circle">8</div>
+                                <div>
+                                    <h4>Практические занятия.</h4>
+                                    <p class="chapter-text">
+                                        На практических занятиях мы
+                                        научим наши модели
+                                        искусственного интеллекта
+                                        следующим вещам: предсказывать
+                                        нажатие на рекламу
+                                        пользователем в фейсбуке;
+                                        определять рак груди;
+                                        предсказывать ухода в отставку
+                                        клиентов банка; определять
+                                        наличие кифоза у детей;
+                                        определять положительные и
+                                        отрицательные отзывы yelp;
+                                        определять положительные и
+                                        отрицательные отзывы на
+                                        амазоне; определять спам
+                                        письма; предсказывать наличие
+                                        болезней сердца у пациентов;
+                                        определять износ деталей на
+                                        токарном станке.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ninth-chapter">
+                                <div class="number-circle">9</div>
+                                <div>
+                                    <h4>
+                                        Deep learning: Искусственные
+                                        нейронные сети.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        В этой секции ты узнаешь, что
+                                        такое deep learning и как это
+                                        работает, также ты поймешь,
+                                        что такое нейроны и как
+                                        нейроные сети обучаются. Мы
+                                        детально разберём все
+                                        процессы, связанные с
+                                        нейронными сетями. Ты также
+                                        познакомишься с библиотекой
+                                        keras, фреймворком tensorflow
+                                        и средой разработки google
+                                        colab.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tenth-chapter">
+                                <div class="number-circle">10</div>
+                                <div>
+                                    <h4>
+                                        Deep learning: конволюционные
+                                        нейронные сети.
+                                    </h4>
+                                    <p class="chapter-text">
+                                        Эта секция посвящена
+                                        конволюционным нейронным
+                                        сетям, которые применяются в
+                                        компьютерном зрении. Мы
+                                        детально разберём как
+                                        искусственный интеллект
+                                        распознает те или иные вещи,
+                                        например, машины или яблоки.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="eleventh-chapter">
+                                <div class="number-circle">11</div>
+                                <div>
+                                    <h4>Практические занятия.</h4>
+                                    <p class="chapter-text">
+                                        На этих занятиях ты
+                                        разработаешь свои нейронные
+                                        сети, которые смогут:
+                                        предсказывать цены
+                                        автомобилей; предсказывать
+                                        выходную мощность
+                                        электростанций (кейс
+                                        виртуальных сенсоров);
+                                        предсказывать поломки насоса
+                                        на основе данных из сенсоров
+                                        насоса; распознавать
+                                        рукописные цифры, распознавать
+                                        элементы одежды, распознавать
+                                        различные объекты;
+                                        распознавать повреждённые
+                                        автомобили; распознавать
+                                        уличные дорожные знаки для
+                                        беспилотных автомобилей.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="second-chapter">
-                        <div class="number-circle">2</div>
-                        <div>
-                            <h4>Введение в программирование.</h4>
-                            <p class="chapter-text">
-                                Эта секция начинается с объяснения
-                                понятий проблемы, сути и целей
-                                искусственного интеллекта. Ты узнаешь
-                                в чем разница между данными и
-                                информацией. А также что такое
-                                качество информации. Мы разберём, что
-                                такое алгоритмы, компьютерные
-                                программы и язык программирования
-                                Python, и начнём работать в
-                                интегрированной среде разработки для
-                                языка Python. Далее мы поймем суть
-                                переменных их свойства и типы. Именно
-                                с этой секции ты начнёшь писать свои
-                                первые программные коды на языке
-                                программирования Python. Мы изучим все
-                                аспекты этого удивительного языка.
-                                Далее мы разберём такие библиотеки как
-                                Numpy, Pandas и Matplotlib. В этой
-                                секции ты познакомишься со средой
-                                разработки Jupyter Notebook.
-                            </p>
+                    <div class="part-container">
+                        <div class="second-part part">
+                            <div class="part-circle"></div>
+                            <div class="parts-header">
+                                AI - Senior Level.
+                                <span class="duration">
+                                    Продолжительность 1.5 года.</span
+                                ><span class="in-progress">
+                                    В РАЗРАБОТКЕ
+                                </span>
+                            </div>
+                            <button class="accordion-btn">
+                                <div class="content-btn">
+                                    <img
+                                        src="src/assets/img/icons/chevron-close.svg"
+                                        alt="chevron"
+                                        width="16px"
+                                        height="10px"
+                                    />
+                                </div>
+                            </button>
                         </div>
                     </div>
-                    <div class="third-chapter">
-                        <div class="number-circle">3</div>
-                        <div>
-                            <h4>
-                                Введение в искусственный интеллект.
-                            </h4>
-                            <p class="chapter-text">
-                                Эта секция показывает нам, разницу
-                                между линейным и нелинейным
-                                программированием. Описывает процесс
-                                получение знаний. Также, ты узнаешь, в
-                                чем разница между AI, machine learning
-                                и deep learning. Также обсудим виды
-                                искусственного интеллекта, его
-                                применения и примеры.
-                            </p>
+                    <div class="part-container">
+                        <div class="third-part part">
+                            <div class="part-circle"></div>
+                            <div class="parts-header">
+                                AI - Senior Level V2.0.
+                                <span class="duration">
+                                    Продолжительность 1.5 года.</span
+                                ><span class="in-progress">
+                                    В РАЗРАБОТКЕ
+                                </span>
+                            </div>
+                            <button class="accordion-btn">
+                                <div class="content-btn">
+                                    <img
+                                        src="src/assets/img/icons/chevron-close.svg"
+                                        alt="chevron"
+                                        width="16px"
+                                        height="10px"
+                                    />
+                                </div>
+                            </button>
                         </div>
-                    </div>
-                    <div class="fourth-chapter">
-                        <div class="number-circle">4</div>
-                        <div>
-                            <h4>Алгоритм machine learning.</h4>
-                            <p class="chapter-text">
-                                В этих секциях, мы подробно разберём
-                                работу алгоритмов machine learning. И
-                                ты создашь очень простую, но уже свою
-                                модель искусственного интеллекта.
-                                Также ты научишься оценивать точность
-                                моделей. В этой секции мы подробно
-                                начнём разбирать одну из библиотек
-                                искусственного интеллекта scikit
-                                learn. Здесь же мы разберём другую
-                                среду разработки, которая называется
-                                spyder.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="fifth-chapter">
-                        <div class="number-circle">5</div>
-                        <div>
-                            <h4>
-                                Процесс разработки модели
-                                искусственного интеллекта и инженерия
-                                данных.
-                            </h4>
-                            <p class="chapter-text">
-                                Здесь мы подробно обсудим весь процесс
-                                разработки модели искусственного
-                                интеллекта. Также мы начнём изучение
-                                анализа данных и их обработки для
-                                обучения искусственного интеллекта. В
-                                этой секции я научу тебя практическим
-                                примерам анализа и обработки данных от
-                                А до Я.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="sixth-chapter">
-                        <div class="number-circle">6</div>
-                        <div>
-                            <h4>Отбор фичей.</h4>
-                            <p class="chapter-text">
-                                В этой секции из всех данных, что у
-                                нас есть, мы научимся отбирать только
-                                те, что нам нужны для обучения
-                                искусственного интеллекта.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="seventh-chapter">
-                        <div class="number-circle">7</div>
-                        <div>
-                            <h4>
-                                Чек лист почти для всех проектов
-                                искусственного интеллекта.
-                            </h4>
-                            <p class="chapter-text">
-                                В этой секции я дам чек лист действий
-                                для построения end-to-end проектов
-                                искусственного интеллекта.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="eighth-chapter">
-                        <div class="number-circle">8</div>
-                        <div>
-                            <h4>Практические занятия.</h4>
-                            <p class="chapter-text">
-                                На практических занятиях мы научим
-                                наши модели искусственного интеллекта
-                                следующим вещам: предсказывать нажатие
-                                на рекламу пользователем в фейсбуке;
-                                определять рак груди; предсказывать
-                                ухода в отставку клиентов банка;
-                                определять наличие кифоза у детей;
-                                определять положительные и
-                                отрицательные отзывы yelp; определять
-                                положительные и отрицательные отзывы
-                                на амазоне; определять спам письма;
-                                предсказывать наличие болезней сердца
-                                у пациентов; определять износ деталей
-                                на токарном станке.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ninth-chapter">
-                        <div class="number-circle">9</div>
-                        <div>
-                            <h4>
-                                Deep learning: Искусственные нейронные
-                                сети.
-                            </h4>
-                            <p class="chapter-text">
-                                В этой секции ты узнаешь, что такое
-                                deep learning и как это работает,
-                                также ты поймешь, что такое нейроны и
-                                как нейроные сети обучаются. Мы
-                                детально разберём все процессы,
-                                связанные с нейронными сетями. Ты
-                                также познакомишься с библиотекой
-                                keras, фреймворком tensorflow и средой
-                                разработки google colab.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="tenth-chapter">
-                        <div class="number-circle">10</div>
-                        <div>
-                            <h4>
-                                Deep learning: конволюционные
-                                нейронные сети.
-                            </h4>
-                            <p class="chapter-text">
-                                Эта секция посвящена конволюционным
-                                нейронным сетям, которые применяются в
-                                компьютерном зрении. Мы детально
-                                разберём как искусственный интеллект
-                                распознает те или иные вещи, например,
-                                машины или яблоки.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="eleventh-chapter">
-                        <div class="number-circle">11</div>
-                        <div>
-                            <h4>Практические занятия.</h4>
-                            <p class="chapter-text">
-                                На этих занятиях ты разработаешь свои
-                                нейронные сети, которые смогут:
-                                предсказывать цены автомобилей;
-                                предсказывать выходную мощность
-                                электростанций (кейс виртуальных
-                                сенсоров); предсказывать поломки
-                                насоса на основе данных из сенсоров
-                                насоса; распознавать рукописные цифры,
-                                распознавать элементы одежды,
-                                распознавать различные объекты;
-                                распознавать повреждённые автомобили;
-                                распознавать уличные дорожные знаки
-                                для беспилотных автомобилей.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="parts">
-                        <div class="part-circle"></div>
-                        <h3 class="parts-header">
-                            AI - Senior Level.
-                            <span> Продолжительность 1.5 года</span>
-                        </h3>
-                    </div>
-                    <div class="parts">
-                        <div class="part-circle"></div>
-                        <h3 class="parts-header">
-                            AI - Senior Level V2.0.
-                            <span> Продолжительность 1.5 года</span>
-                        </h3>
-                        <div>В РАЗРАБОТКЕ</div>
                     </div>
                 </div>
                 <button class="light-button">
@@ -705,9 +784,10 @@
         </main>
 
         <main class="seventh-page odd-main">
-            <section class="content-container author">
-                <h2>АВТОР КУРСА</h2>
+            <section class="content-container author-container">
                 <div class="about-author">
+                    <h2>АВТОР КУРСА</h2>
+                    <br />
                     <p>
                         Основателем курса является Владимир Ким,
                         действующий и ведущий специалист в области
@@ -736,6 +816,17 @@
                         предприятий Южной Кореи.
                     </p>
                 </div>
+                <div class="author">
+                    <img
+                        src="src/assets/img/Vladimir_Kim.png"
+                        alt="author"
+                        width="441px"
+                    />
+                    <div class="author-name">
+                        <span>Владимир Ким</span>
+                        <p>Ведущий специалист</p>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -744,5 +835,131 @@
                 <h2>ОБЪЯВЛЕНИЯ ШКОЛЫ</h2>
             </section>
         </main>
+
+        <main class="ninth-page odd-main">
+            <section class="content-container vacancies">
+                <h2>ВАКАНСИИ</h2>
+            </section>
+        </main>
+
+        <footer>
+            <div class="content-container footer-container">
+                <img
+                    src="src/assets/img/VeraVla-logo.png"
+                    alt="VeraVla edu logo"
+                    class="VeraVla-logo"
+                    height="86px"
+                />
+                <div class="contact-us">
+                    <div class="contacts">
+                        <div>
+                            <img
+                                src="src/assets/img/icons/e-mail.svg"
+                                alt="e-mail"
+                                class="email-logo"
+                                width="25px"
+                                height="18px"
+                            />
+                            <a
+                                href="mailto:veravlaedu@gmail.com"
+                                class="email"
+                                >veravlaedu@gmail.com</a
+                            >
+                        </div>
+
+                        <div class="telephone">
+                            <img
+                                src="src/assets/img/icons/phone.svg"
+                                slt="phone"
+                                class="tel-logo"
+                                width="23px"
+                                height="23px"
+                            />
+                            <span class="phone-number"
+                                >+ 82 (10) 7526-9192
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="social-media">
+                            <li class="footer-text">
+                                МЫ В СОЦ СЕТЯХ
+                            </li>
+                            <li>
+                                <a
+                                    href="##"
+                                    class="media-item facebook"
+                                    ><img
+                                        src="src/assets/img/icons/facebook.svg"
+                                        alt="facebook"
+                                        width="24px"
+                                        height="24px"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="##"
+                                    class="media-item messenger"
+                                    ><img
+                                        src="src/assets/img/icons/messenger.svg"
+                                        alt="messenger"
+                                        width="24px"
+                                        height="25px"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="##"
+                                    class="media-item youtube"
+                                    ><img
+                                        src="src/assets/img/icons/youtube.svg"
+                                        alt="youtube"
+                                        width="22px"
+                                        height="26px"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="##"
+                                    class="media-item whatsapp"
+                                    ><img
+                                        src="src/assets/img/icons/whatsapp.svg"
+                                        alt="whatsapp"
+                                        width="24px"
+                                        height="24px"
+                                /></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="##"
+                                    class="media-item cacaotalk"
+                                    ><img
+                                        src="src/assets/img/icons/cacaotalk.svg"
+                                        alt="cacaotalk"
+                                        width="31px"
+                                        height="25px"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">
+                Copyright © 2021 VeraVla edu. All rights reserved
+            </p>
+            <div class="afreeca-wrapper">
+                <div class="afreeca">
+                    <p class="footer-text">DEVELOPED BY AFREECA</p>
+                    <img
+                        src="src/assets/img/icons/afreeca-logo.svg"
+                        alt="aFREEca"
+                        width="124px"
+                        height="37px"
+                    />
+                </div>
+            </div>
+        </footer>
+
+        <script src="accordion.js"></script>
     </body>
 </html>

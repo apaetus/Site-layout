@@ -6,13 +6,13 @@ body {
 }
 
 main {
-    box-shadow: inset -24px 0px 24px 0px rgba(0, 224, 255, 0.3),
-        inset -24px 4px 15px 0px rgba(74, 217, 236, 0.3),
-        inset -24px 3px 15px 0px rgba(0, 224, 255, 0.23);
+    box-shadow: inset 0px 0px 24px 0px rgba(0, 224, 255, 0.3),
+        inset 0px 4px 15px 0px rgba(74, 217, 236, 0.3),
+        inset 0px 3px 15px 0px rgba(0, 224, 255, 0.23);
 
     border-bottom: 2px solid;
 
-    border-image-source: linear-gradient(
+    border-image: linear-gradient(
         270deg,
         rgba(74, 207, 236, 0.21) 0%,
         #32abc3 53.12%,
@@ -45,15 +45,13 @@ main {
     width: 1200px;
 }
 
-.tel_logo {
-    height: 25px;
+.tel-logo {
+    padding-right: 10px;
     vertical-align: middle;
 }
 
-.phone_number {
-    color: white;
+.phone-number {
     font-size: 18px;
-    font-family: 'Avenir Next Cyr';
 }
 
 /* main {
@@ -69,9 +67,9 @@ aside {
     height: 100vh;
 }
 
-a {
+/* a {
     text-decoration: none;
-}
+} */
 
 .consultation-container {
     display: flex;
@@ -131,11 +129,13 @@ a {
 }
 
 h1 {
-    font-family: 'Avenir Next Cyr';
     font-size: 102px;
-    color: white;
     margin: 0 auto;
+    padding-left: 3px;
     letter-spacing: 3.6px;
+    background: linear-gradient(180deg, #ffffff 31.75%, #1a3031 100%);
+    background-clip: text;
+    color: transparent;
 }
 
 .motivation-text {
@@ -176,24 +176,25 @@ h1 {
     padding-top: 11px;
 }
 
+button {
+    cursor: pointer;
+}
+
 .light-button {
     margin-top: 24px;
     width: 479px;
     height: 60px;
-    color: white;
     background: linear-gradient(
         180deg,
         rgba(3, 225, 255, 0.66) 0%,
         #13cdc2 100%
     );
     border-radius: 9px;
-    border-width: 0;
-    font-family: 'Avenir Next Cyr';
+    border: 0;
     font-size: 12px;
     font-weight: 750;
     line-height: 14.7px;
     letter-spacing: 0.27em;
-    cursor: pointer;
     box-shadow: 0px 7px 20px -7px #00e0ff;
 }
 
@@ -238,7 +239,6 @@ h1 {
 
 h2 {
     margin: 107px 0 20px;
-    font-family: 'Avenir Next Cyr';
     font-size: 54px;
     font-weight: 450;
     color: #ffffff;
@@ -565,19 +565,30 @@ h2 {
     margin-bottom: 26px;
 }
 
-.parts {
+.part {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     padding: 0 15px;
+    height: 56px;
     background: linear-gradient(
         286.41deg,
         #073447 3.63%,
         #08262b 90.98%
     );
-    height: 56px;
     border-radius: 6px;
+}
+
+.part-content {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.part-container.active .part-content {
+    height: 750px;
+    overflow: visible;
 }
 
 .part-circle {
@@ -589,15 +600,13 @@ h2 {
 
 .parts-header {
     margin-left: 15px;
-    color: white;
-    font-family: 'Avenir Next Cyr';
     font-size: 20px;
     font-weight: 750;
     line-height: 21px;
     flex-grow: 1;
 }
 
-.parts-header span {
+.duration {
     margin-left: 15px;
     font-size: 15px;
     font-weight: 450;
@@ -613,29 +622,62 @@ h2 {
     align-items: center;
     justify-content: center;
     border-radius: 27px;
-    font-family: 'Avenir Next Cyr';
-
     font-size: 14px;
     font-weight: 750;
-    /* line-height: 21px; */
     color: #08262b;
 }
 
 .accordion-btn {
+    padding: 2px;
     width: 32px;
     height: 32px;
-    border-radius: 6px;
-    border: 2px;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 224, 255, 0.11) 0%,
-        rgba(0, 224, 255, 0.0539) 100%
+    border: 2px solid;
+    background: radial-gradient(
+        47.54% 111.62% at 50% 50%,
+        #49b9e8 0%,
+        rgba(31, 77, 96, 0.43) 100%
     );
+    border-radius: 5px;
+    border: 0;
+}
+
+.in-progress {
+    background-color: #00e0ff;
+    color: #08262b;
+    margin-left: 20px;
+    padding: 0 2px;
+    width: 102px;
+    height: 17px;
+    font-size: 13px;
+    font-weight: 450;
+    line-height: 21px;
+}
+
+.content-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #054358 0%, #043e54 100%);
+    border-radius: 5px;
+}
+
+.number-circle {
+    display: flex;
+    width: 27px;
+    height: 27px;
+    background: #4abcec;
+    align-items: center;
+    justify-content: center;
+    border-radius: 27px;
+    font-size: 14px;
+    font-weight: 750;
+    color: #08262b;
 }
 
 h4 {
     margin: 0 0 15px 0;
-    font-family: 'Avenir Next Cyr';
     font-size: 16px;
     font-weight: 750;
     line-height: 21px;
@@ -718,8 +760,12 @@ h4 {
     height: 734px;
 }
 
+.author-container {
+    display: flex;
+    height: 100%;
+}
+
 .about-author {
-    margin-top: 37px;
     width: 488px;
 }
 
@@ -730,6 +776,153 @@ h4 {
     line-height: 24px;
 }
 
+.author {
+    align-self: flex-end;
+    position: relative;
+    margin-left: 95px;
+    height: 100%;
+}
+
+.author img {
+    position: absolute;
+    bottom: 0;
+}
+
+.author-name {
+    position: absolute;
+    width: 180px;
+    left: 250px;
+    bottom: 93px;
+}
+
+.author-name span {
+    color: #00e0ff;
+    font-size: 24px;
+    font-weight: 750;
+    line-height: 20px;
+}
+
+.author-name p {
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 20px;
+}
+
 .eighth-page {
     height: 695px;
+}
+
+.ninth-page {
+    height: 670px;
+}
+
+footer {
+    height: 284px;
+    background: linear-gradient(90deg, #022335 3.63%, #043a41 90.98%);
+}
+
+.footer-container {
+    height: 89px;
+    padding-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 475px;
+    height: 100%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-logo {
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.email {
+    font-size: 18px;
+    color: #4abcec;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 155px;
+    list-style-type: none;
+}
+
+.footer-text {
+    padding-top: 7px;
+    color: #747d81;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    margin-right: 12px;
+}
+
+.media-item {
+    display: block;
+    background-size: contain;
+}
+
+.copyright {
+    position: relative;
+    margin: 45px auto 0;
+    text-align: center;
+    font-size: 14px;
+    background: linear-gradient(
+        180deg,
+        #ffffff 65.96%,
+        rgba(105, 104, 104, 0) 100%
+    );
+
+    background-clip: text;
+    color: transparent;
+}
+
+.copyright::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 40%;
+    height: 1px;
+    background: #00e0ff33;
+}
+
+.copyright::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 1px;
+    background: #00e0ff33;
+}
+
+.afreeca-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.afreeca {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    right: 0;
 }
