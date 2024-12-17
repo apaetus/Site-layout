@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-main {
+.main {
     box-shadow: inset 0px 0px 24px 0px rgba(0, 224, 255, 0.3),
         inset 0px 4px 15px 0px rgba(74, 217, 236, 0.3),
         inset 0px 3px 15px 0px rgba(0, 224, 255, 0.23);
@@ -429,6 +429,7 @@ h2 {
     width: 568px;
     height: 203px;
     border-radius: 20px;
+    opacity: 0.5;
 }
 
 .first-important img {
@@ -448,6 +449,7 @@ h2 {
     width: 568px;
     height: 203px;
     border-radius: 20px;
+    opacity: 0.5;
 }
 
 .second-important img {
@@ -467,6 +469,7 @@ h2 {
     width: 568px;
     height: 203px;
     border-radius: 20px;
+    opacity: 0.5;
 }
 
 .third-important img {
@@ -486,6 +489,7 @@ h2 {
     width: 568px;
     height: 203px;
     border-radius: 20px;
+    opacity: 0.5;
 }
 
 .fourth-important img {
@@ -586,9 +590,8 @@ h2 {
     overflow: hidden;
 }
 
-.part-container.active .part-content {
+.part-content.active {
     height: 750px;
-    overflow: visible;
 }
 
 .part-circle {
