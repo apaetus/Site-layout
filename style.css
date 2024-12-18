@@ -72,41 +72,54 @@ aside {
 } */
 
 .consultation-container {
+    position: fixed;
+    left: 95px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .outer-circle {
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 139px;
     height: 139px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
 }
 
-.inner-circle {
-    position: absolute;
-    top: 19.5px;
-    left: 19.5px;
-    width: 100px;
-    height: 100px;
-    background: #00e0ff;
+.consultation-btn {
+    background: transparent;
+    border: none;
     border-radius: 50%;
 }
 
-.logo-headphone {
-    position: absolute;
-    top: 30px;
-    left: 30px;
+.inner-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(
+        180deg,
+        rgba(3, 225, 255, 0.66) 0%,
+        #13cdc2 100%
+    );
+    border-radius: 50%;
+    box-shadow: 0px 7px 20px -7px #00e0ff;
 }
 
 .text-consultation {
+    position: absolute;
     color: #00e0ff;
-    transform: rotateZ(-90deg) translate(-270px, 0);
-    width: 281px;
-    letter-spacing: 5px;
+    transform: rotateZ(-90deg) translate(-253px, 0);
+    width: 270px;
+    text-transform: uppercase;
     font-size: 10px;
+    font-weight: 500;
+    line-height: 12.25px;
+    letter-spacing: 0.36em;
 }
 
 .greetings {
@@ -294,6 +307,7 @@ h2 {
 }
 
 .reason-wrapper {
+    position: relative;
     padding: 2px;
     background: radial-gradient(
         47.54% 111.62% at 50% 50%,
@@ -301,6 +315,18 @@ h2 {
         rgba(31, 77, 96, 0.43) 100%
     );
     border-radius: 20px;
+}
+
+.reason-wrapper::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 64px;
+    height: 30px;
+    left: 30px;
+    bottom: -12px;
+    background-image: url(src/assets/img/icons/shine.svg);
+    background-size: cover;
 }
 
 .reason-vector1 {
@@ -388,11 +414,25 @@ h2 {
 }
 
 .argument-text {
+    position: relative;
     font-size: 15px;
     font-weight: 450;
     line-height: 21px;
     padding-top: 7px;
     padding-left: 19px;
+}
+
+.argument-text::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 30px;
+    left: 0px;
+    top: 4px;
+    opacity: 0.7;
+    background-image: url(src/assets/img/icons/shine.svg);
+    background-size: cover;
 }
 
 .first-argument {
@@ -422,19 +462,43 @@ h2 {
     grid-template-rows: 1fr 1fr;
 }
 
+.important-wrapper {
+    position: relative;
+    padding: 2px;
+    width: 285px;
+    height: 203px;
+    background: radial-gradient(
+        47.54% 111.62% at 50% 50%,
+        #49b9e8 0%,
+        rgba(31, 77, 96, 0.43) 100%
+    );
+    border-radius: 20px;
+}
+
+.important-wrapper img {
+    border-radius: 20px;
+    filter: brightness(45%);
+    opacity: 0.8;
+}
+
+.important-wrapper::before {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    content: '';
+    width: 64px;
+    height: 30px;
+    left: 30px;
+    bottom: -12px;
+    background-image: url(src/assets/img/icons/shine.svg);
+    background-size: cover;
+}
+
 .first-important {
-    overflow: hidden;
     padding: 2px 0 0 2px;
     display: flex;
     width: 568px;
     height: 203px;
-    border-radius: 20px;
-    opacity: 0.5;
-}
-
-.first-important img {
-    margin-left: -285px;
-    border-radius: 20px;
 }
 
 .first-important p {
@@ -448,12 +512,6 @@ h2 {
     display: flex;
     width: 568px;
     height: 203px;
-    border-radius: 20px;
-    opacity: 0.5;
-}
-
-.second-important img {
-    border-radius: 20px;
 }
 
 .second-important p {
@@ -468,12 +526,6 @@ h2 {
     display: flex;
     width: 568px;
     height: 203px;
-    border-radius: 20px;
-    opacity: 0.5;
-}
-
-.third-important img {
-    border-radius: 20px;
 }
 
 .third-important p {
@@ -488,12 +540,6 @@ h2 {
     display: flex;
     width: 568px;
     height: 203px;
-    border-radius: 20px;
-    opacity: 0.5;
-}
-
-.fourth-important img {
-    border-radius: 20px;
 }
 
 .fourth-important p {
@@ -513,9 +559,22 @@ h2 {
 }
 
 .advantage p {
+    position: relative;
     font-size: 16px;
     font-weight: 450;
     line-height: 23px;
+}
+
+.advantage p::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 64px;
+    height: 30px;
+    left: -3px;
+    top: 8px;
+    background-image: url(src/assets/img/icons/shine.svg);
+    background-size: cover;
 }
 
 .first-advantage {
@@ -779,6 +838,22 @@ h4 {
     line-height: 24px;
 }
 
+.text-shine {
+    position: relative;
+}
+
+.text-shine::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 64px;
+    height: 30px;
+    left: -25px;
+    top: -4px;
+    background-image: url(src/assets/img/icons/shine.svg);
+    background-size: cover;
+}
+
 .author {
     align-self: flex-end;
     position: relative;
@@ -820,6 +895,7 @@ h4 {
 }
 
 footer {
+    position: relative;
     height: 284px;
     background: linear-gradient(90deg, #022335 3.63%, #043a41 90.98%);
 }
@@ -928,4 +1004,56 @@ footer {
     align-items: center;
     margin-top: 10px;
     right: 0;
+}
+
+.up-container {
+    position: absolute;
+    top: -70px;
+    left: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.outer-circle-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 139px;
+    height: 139px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.up-btn {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.inner-circle-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(
+        180deg,
+        rgba(3, 225, 255, 0.66) 0%,
+        #13cdc2 100%
+    );
+    border-radius: 50%;
+    box-shadow: 0px 7px 20px -7px #00e0ff;
+}
+
+.text-up {
+    position: absolute;
+    color: #00e0ff;
+    transform: rotateZ(270deg) translate(85px, 0);
+    width: 150px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12.25px;
+    letter-spacing: 0.36em;
 }

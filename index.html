@@ -34,24 +34,26 @@
                     </div>
                 </header>
             </div>
-            <!-- <aside>
-                <a href="#">
-                    <div class="consultation-container">
-                        <div class="outer-circle">
-                            <div class="inner-circle">
-                                <img
-                                    class="logo-headphone"
-                                    src="/src/assets/img/icons/icon_headset.png"
-                                    alt="consultation"
-                                />
-                            </div>
+
+            <div class="consultation-container" id="consultation">
+                <div class="outer-circle">
+                    <button class="consultation-btn">
+                        <div class="inner-circle">
+                            <img
+                                class="logo-headphone"
+                                src="/src/assets/img/icons/headphone.svg"
+                                alt="consultation"
+                                width="40px"
+                                height="38px"
+                            />
                         </div>
-                        <p class="text-consultation">
-                            БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
-                        </p>
-                    </div>
-                </a>
-            </aside> -->
+                    </button>
+                </div>
+                <p class="text-consultation">
+                    бесплатная консультация
+                </p>
+            </div>
+
             <section class="content-container greetings">
                 <div class="info">
                     <p class="welcome">
@@ -91,10 +93,6 @@
                         ЗАПИСАТЬСЯ НА ОЗНАКОМИТЕЛЬНЫЙ ВЕБИНАР
                     </button>
                 </div>
-                <!-- <div class="scroll-down">
-                    <div class="switch-button"></div>
-                    <p>листайте вниз</p>
-                </div> -->
             </section>
         </div>
 
@@ -303,11 +301,13 @@
                 </h2>
                 <div class="importants">
                     <div class="first-important important">
-                        <img
-                            src="src/assets/img/artificial-intelligence.jpg"
-                            alt="artificial intelligence"
-                            height="203px"
-                        />
+                        <div class="important-wrapper">
+                            <img
+                                src="src/assets/img/artificial-intelligence.jpg"
+                                alt="artificial intelligence"
+                                height="203px"
+                            />
+                        </div>
                         <p>
                             Искусственный интеллект - <br />это не
                             одна дисциплина, как думают многие, а
@@ -316,12 +316,14 @@
                         </p>
                     </div>
                     <div class="second-important important">
-                        <img
-                            src="src/assets/img/good-specialist.jpg"
-                            alt="good specialist"
-                            width="285px"
-                            height="203px"
-                        />
+                        <div class="important-wrapper">
+                            <img
+                                src="src/assets/img/good-specialist.jpg"
+                                alt="good specialist"
+                                width="285px"
+                                height="203px"
+                            />
+                        </div>
                         <p>
                             Подготовка реально <br />хороших
                             специалистов <br />требует времени,
@@ -337,11 +339,14 @@
                             и книжкам, <br />и преподают без практики,
                             <br />что очень печально.
                         </p>
-                        <img
-                            src="src/assets/img/practice.jpg"
-                            alt="practice"
-                            width="285px"
-                        />
+                        <div class="important-wrapper">
+                            <img
+                                src="src/assets/img/practice.jpg"
+                                alt="practice"
+                                width="285px"
+                                height="203px"
+                            />
+                        </div>
                     </div>
                     <div class="fourth-important important">
                         <p>
@@ -352,11 +357,13 @@
                             <br />решать реальные задачи <br />на
                             работе.
                         </p>
-                        <img
-                            src="src/assets/img/real-problems.jpg"
-                            alt="real problems"
-                            width="285px"
-                        />
+                        <div class="important-wrapper">
+                            <img
+                                src="src/assets/img/real-problems.jpg"
+                                alt="real problems"
+                                height="203px"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -788,7 +795,7 @@
                 <div class="about-author">
                     <h2>АВТОР КУРСА</h2>
                     <br />
-                    <p>
+                    <p class="text-shine">
                         Основателем курса является Владимир Ким,
                         действующий и ведущий специалист в области
                         искусственного интеллекта в Южной Корее,
@@ -836,13 +843,32 @@
             </section>
         </div>
 
-        <div class="ninth-page odd-main main">
+        <div
+            class="ninth-page odd-main main"
+            id="stopper-consultation"
+        >
             <section class="content-container vacancies">
                 <h2>ВАКАНСИИ</h2>
             </section>
         </div>
 
         <footer>
+            <div class="up-container">
+                <div class="outer-circle-up">
+                    <button class="up-btn">
+                        <div class="inner-circle-up">
+                            <img
+                                class="arrow-up"
+                                src="/src/assets/img/icons/arrow-up.svg"
+                                alt="arrow-up"
+                                width="16px"
+                            />
+                        </div>
+                    </button>
+                </div>
+                <p class="text-up">подняться вверх</p>
+            </div>
+
             <div class="content-container footer-container">
                 <img
                     src="src/assets/img/VeraVla-logo.png"
@@ -960,6 +986,6 @@
             </div>
         </footer>
 
-        <script src="accordion.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
