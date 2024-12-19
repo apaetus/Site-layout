@@ -15,7 +15,7 @@ function onButtonClick() {
 function accordion() {
     for (let i = 0; i < accordionBtn.length; i++) {
         accordionBtn[i].addEventListener('click', function (event) {
-            let button = event.target.closest('.part');
+            const button = event.target.closest('.part');
             if (!button) return;
 
             chevron.classList.toggle('active');
