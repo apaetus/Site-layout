@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: url('src/assets/font/Avenir-Next-Cyr-Medium/AvenirNextCyr-Medium.woff2')
+            format('woff2'),
+        url('src/assets/font/Avenir-Next-Cyr-Medium/AvenirNextCyr-Medium.woff')
+            format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: 'Avenir Next Cyr';
+    color: white;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
