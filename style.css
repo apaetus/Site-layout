@@ -644,13 +644,18 @@ h2 {
 }
 
 .part-content {
-    position: relative;
+    display: none;
     height: 0;
-    overflow: hidden;
 }
 
-.part-content.active {
-    height: 750px;
+.chevron {
+    transition: 400ms;
+    transform: rotateZ(0);
+}
+
+.active {
+    transition: 400ms;
+    transform: rotateZ(-180deg);
 }
 
 .part-circle {

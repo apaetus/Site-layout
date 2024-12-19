@@ -14,8 +14,6 @@ const callBack = (entries) => {
     } else {
         consultationButton.style = '';
     }
-
-    console.log(isStop);
 };
 
 const observer = new IntersectionObserver(callBack, options);
