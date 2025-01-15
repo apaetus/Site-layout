@@ -3,19 +3,17 @@ const chevron = document.getElementById('chevron');
 const partContent = document.getElementById('part-content');
 
 function onButtonClick() {
-    if (partContent.style.height === 'auto') {
-        partContent.style.height = '0px';
-        partContent.style.display = 'none';
+    if (partContent.style.maxHeight) {
+        partContent.style.maxHeight = null;
     } else {
-        partContent.style.height = 'auto';
-        partContent.style.display = 'block';
+        partContent.style.maxHeight = partContent.scrollHeight + 'px';
     }
 }
 
 function accordion() {
     for (let i = 0; i < accordionBtn.length; i++) {
         accordionBtn[i].addEventListener('click', function (event) {
-            const button = event.target.closest('.part');
+            const button = event.target.closest('.first-part');
             if (!button) return;
 
             chevron.classList.toggle('active');
