@@ -60,6 +60,9 @@ body {
 
 .first-page {
     height: 1003px;
+    background-image: url('src/assets/img/background-first-section.png');
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 aside {
