@@ -1,24 +1,28 @@
-const accordionBtn = document.getElementsByClassName('part');
-const chevron = document.getElementById('chevron');
-const partContent = document.getElementById('part-content');
+const accordionBtnNode = document.getElementsByClassName('part');
+const chevronNode = document.getElementById('chevron');
+const partContentNode = document.getElementById('part-content');
 
 function onButtonClick() {
-    if (partContent.style.maxHeight) {
-        partContent.style.maxHeight = null;
+    if (partContentNode.style.maxHeight) {
+        partContentNode.style.maxHeight = null;
     } else {
-        partContent.style.maxHeight = partContent.scrollHeight + 'px';
+        partContentNode.style.maxHeight =
+            partContentNode.scrollHeight + 'px';
     }
 }
 
 function accordion() {
-    for (let i = 0; i < accordionBtn.length; i++) {
-        accordionBtn[i].addEventListener('click', function (event) {
-            const button = event.target.closest('.first-part');
-            if (!button) return;
+    for (let i = 0; i < accordionBtnNode.length; i++) {
+        accordionBtnNode[i].addEventListener(
+            'click',
+            function (event) {
+                const button = event.target.closest('.first-part');
+                if (!button) return;
 
-            chevron.classList.toggle('active');
-            onButtonClick();
-        });
+                chevronNode.classList.toggle('activeAccordion');
+                onButtonClick();
+            }
+        );
     }
 }
 

@@ -1,6 +1,6 @@
-const scrollButton = document.getElementById('scrollBtn');
+const scrollButtonNode = document.getElementById('scrollBtn');
 
-scrollButton.addEventListener('click', (event) => {
+scrollButtonNode.addEventListener('click', (event) => {
     const button = event.target.closest('#scrollBtn');
     if (!button) return;
 

@@ -1,7 +1,8 @@
-const stopperConsultation = document.getElementById(
+const stopperConsultationNode = document.getElementById(
     'stopper-consultation'
 );
-const consultationButton = document.getElementById('consultation');
+const consultationButtonNode =
+    document.getElementById('consultation');
 const options = {
     root: null,
     threshold: 0,
@@ -10,12 +11,12 @@ const options = {
 const callBack = (entries) => {
     const isStop = entries[0].isIntersecting;
     if (isStop) {
-        consultationButton.style = 'display: none';
+        consultationButtonNode.style = 'display: none';
     } else {
-        consultationButton.style = '';
+        consultationButtonNode.style = '';
     }
 };
 
 const observer = new IntersectionObserver(callBack, options);
 
-observer.observe(stopperConsultation);
+observer.observe(stopperConsultationNode);
