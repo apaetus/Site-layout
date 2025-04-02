@@ -32,7 +32,7 @@ body {
     background: linear-gradient(45deg, #021c2b 3.63%, #0a2b30 90.98%);
 }
 
-.header {
+header {
     padding-top: 46px;
     display: flex;
     justify-content: space-between;
@@ -49,10 +49,6 @@ body {
     vertical-align: middle;
 }
 
-.phone-number {
-    font-size: 18px;
-}
-
 .first-page {
     height: 1003px;
     position: relative;
@@ -64,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 4;
 }
 
 .outer-circle {
@@ -144,22 +141,24 @@ h1 {
     display: flex;
     flex-direction: row;
     height: 89px;
+    justify-content: space-evenly;
 }
 
 .vector-education {
+    display: flex;
     width: 71px;
     height: 71px;
     background-image: url('src/assets/img/icons/bckgrnd.svg');
-}
-
-.img-edu {
-    padding: 18px 16px 14px 16px;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-container {
     align-self: center;
-    padding-left: 33px;
+    /* padding-left: 33px; */
     height: 86px;
+    width: 470px;
 }
 
 .guarantee-edu-text {
@@ -172,20 +171,23 @@ h1 {
 }
 
 .background-image {
-    height: 726px;
-    width: 965px;
-    position: absolute;
-    top: 148px;
-    right: -10px;
-    z-index: 1;
     background-image: url('src/assets/img/background-first-section.jpg');
+    position: absolute;
+    width: 965px;
+    height: 726px;
+
+    top: 148px;
+    right: 0px;
+    /* z-index: 1; */
     background-repeat: no-repeat;
     box-shadow: 58px 4px 191px 47px #022335 inset,
         58px 4px 191px 47px #043a41 inset;
 }
 
 button {
+    position: relative;
     cursor: pointer;
+    z-index: 3;
 }
 
 .light-button {
@@ -640,12 +642,21 @@ h2 {
 
 .fifth-background-image {
     background-image: url('src/assets/img/background-fifth-section.jpg');
-    height: 715px;
+    /* position: relative;
     width: 1058px;
-    position: absolute;
-    z-index: 1;
+    height: 715px;
     top: 132px;
-    right: -361px;
+    right: 0; */
+    /* right: -351px; */
+
+    position: absolute;
+    width: 965px;
+    height: 726px;
+    top: 148px;
+    right: 0px;
+    box-shadow: 58px 4px 191px 47px #022335 inset,
+        58px 4px 191px 47px #043a41 inset;
+    z-index: 1;
 }
 
 .sixth-page {
@@ -963,6 +974,7 @@ h4 {
 
 .carousel-container {
     margin-top: 47px;
+    overflow: hidden;
 }
 
 .carousel-list {

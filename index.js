@@ -1,3 +1,5 @@
+import { initCarousel } from './carousel.js';
+
 const stopperConsultationNode = document.getElementById(
     'stopper-consultation'
 );
@@ -20,3 +22,11 @@ const callBack = (entries) => {
 const observer = new IntersectionObserver(callBack, options);
 
 observer.observe(stopperConsultationNode);
+
+const carouselContainers = document.querySelectorAll(
+    '.carousel-container'
+);
+
+carouselContainers.forEach((container) => {
+    initCarousel(container);
+});
