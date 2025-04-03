@@ -465,7 +465,7 @@ h2 {
 }
 
 .fourth-page {
-    height: 807px;
+    max-height: 807px;
 }
 
 .importants {
@@ -492,6 +492,7 @@ h2 {
     border-radius: 20px;
     filter: brightness(45%);
     opacity: 0.8;
+    background-size: contain;
 }
 
 .important-wrapper::before {
@@ -507,11 +508,14 @@ h2 {
     background-size: cover;
 }
 
-.first-important {
-    padding: 2px 0 0 2px;
+.important {
     display: flex;
     width: 568px;
     height: 203px;
+}
+
+.first-important {
+    padding: 2px 0 0 2px;
 }
 
 .first-important p {
@@ -519,12 +523,6 @@ h2 {
     font-size: 16px;
     font-weight: 450;
     line-height: 23px;
-}
-
-.second-important {
-    display: flex;
-    width: 568px;
-    height: 203px;
 }
 
 .second-important p {
@@ -536,9 +534,6 @@ h2 {
 
 .third-important {
     padding: 25px 0 0 50px;
-    display: flex;
-    width: 568px;
-    height: 203px;
 }
 
 .third-important p {
@@ -550,9 +545,6 @@ h2 {
 
 .fourth-important {
     padding: 25px 0 0 45px;
-    display: flex;
-    width: 568px;
-    height: 203px;
 }
 
 .fourth-important p {
