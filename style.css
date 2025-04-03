@@ -389,7 +389,7 @@ h2 {
 }
 
 .third-page {
-    height: 901px;
+    min-height: 901px;
     padding-top: 12px;
     position: relative;
 }
@@ -401,7 +401,7 @@ h2 {
 
 .arguments {
     width: 689px;
-    padding-top: 32px;
+    margin-top: 32px;
     margin-bottom: 45px;
 }
 
@@ -419,7 +419,6 @@ h2 {
 .argument-text {
     position: relative;
     font-size: 15px;
-    font-weight: 450;
     line-height: 21px;
     padding-top: 7px;
     padding-left: 19px;
@@ -439,19 +438,19 @@ h2 {
 }
 
 .first-argument {
-    height: 51px;
+    min-height: 51px;
 }
 
 .second-argument {
-    height: 108px;
+    min-height: 108px;
 }
 
 .third-argument {
-    height: 84px;
+    min-height: 84px;
 }
 
 .fourth-argument {
-    height: 70px;
+    min-height: 70px;
 }
 
 .third-background-image {
@@ -462,6 +461,7 @@ h2 {
     z-index: 1;
     top: 218px;
     right: 118px;
+    background-size: contain;
 }
 
 .fourth-page {
