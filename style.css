@@ -132,15 +132,14 @@ h1 {
 
 .motivation-text {
     width: 580px;
-    margin-top: 15px;
-    padding-bottom: 8px;
+    margin: 15px 0 8px;
 }
 
 .guarantee-container {
     margin: 77px 0;
     display: flex;
     flex-direction: row;
-    height: 89px;
+    max-height: 89px;
     justify-content: space-evenly;
 }
 
@@ -175,11 +174,10 @@ h1 {
     position: absolute;
     width: 965px;
     height: 726px;
-
     top: 148px;
     right: 0px;
-    /* z-index: 1; */
     background-repeat: no-repeat;
+    background-size: contain;
     box-shadow: 58px 4px 191px 47px #022335 inset,
         58px 4px 191px 47px #043a41 inset;
 }
@@ -243,7 +241,7 @@ button {
 }
 
 .second-page {
-    height: 862px;
+    min-height: 862px;
     padding-top: 18px;
 }
 
@@ -262,7 +260,7 @@ h2 {
 
 .reasons {
     padding-top: 30px;
-    height: 449px;
+    min-height: 449px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
