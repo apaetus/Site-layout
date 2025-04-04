@@ -32,7 +32,7 @@ body {
     background: linear-gradient(45deg, #021c2b 3.63%, #0a2b30 90.98%);
 }
 
-.header {
+header {
     padding-top: 46px;
     display: flex;
     justify-content: space-between;
@@ -49,10 +49,6 @@ body {
     vertical-align: middle;
 }
 
-.phone-number {
-    font-size: 18px;
-}
-
 .first-page {
     height: 1003px;
     position: relative;
@@ -64,6 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 4;
 }
 
 .outer-circle {
@@ -135,31 +132,32 @@ h1 {
 
 .motivation-text {
     width: 580px;
-    margin-top: 15px;
-    padding-bottom: 8px;
+    margin: 15px 0 8px;
 }
 
 .guarantee-container {
     margin: 77px 0;
     display: flex;
     flex-direction: row;
-    height: 89px;
+    max-height: 89px;
+    justify-content: space-evenly;
 }
 
 .vector-education {
+    display: flex;
     width: 71px;
     height: 71px;
     background-image: url('src/assets/img/icons/bckgrnd.svg');
-}
-
-.img-edu {
-    padding: 18px 16px 14px 16px;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-container {
     align-self: center;
-    padding-left: 33px;
+    /* padding-left: 33px; */
     height: 86px;
+    width: 470px;
 }
 
 .guarantee-edu-text {
@@ -172,20 +170,22 @@ h1 {
 }
 
 .background-image {
-    height: 726px;
-    width: 965px;
-    position: absolute;
-    top: 148px;
-    right: -10px;
-    z-index: 1;
     background-image: url('src/assets/img/background-first-section.jpg');
+    position: absolute;
+    width: 965px;
+    height: 726px;
+    top: 148px;
+    right: 0px;
     background-repeat: no-repeat;
+    background-size: contain;
     box-shadow: 58px 4px 191px 47px #022335 inset,
         58px 4px 191px 47px #043a41 inset;
 }
 
 button {
+    position: relative;
     cursor: pointer;
+    z-index: 3;
 }
 
 .light-button {
@@ -241,7 +241,7 @@ button {
 }
 
 .second-page {
-    height: 862px;
+    min-height: 862px;
     padding-top: 18px;
 }
 
@@ -260,7 +260,7 @@ h2 {
 
 .reasons {
     padding-top: 30px;
-    height: 449px;
+    min-height: 449px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas:
@@ -389,7 +389,7 @@ h2 {
 }
 
 .third-page {
-    height: 901px;
+    min-height: 901px;
     padding-top: 12px;
     position: relative;
 }
@@ -401,7 +401,7 @@ h2 {
 
 .arguments {
     width: 689px;
-    padding-top: 32px;
+    margin-top: 32px;
     margin-bottom: 45px;
 }
 
@@ -419,7 +419,6 @@ h2 {
 .argument-text {
     position: relative;
     font-size: 15px;
-    font-weight: 450;
     line-height: 21px;
     padding-top: 7px;
     padding-left: 19px;
@@ -439,19 +438,19 @@ h2 {
 }
 
 .first-argument {
-    height: 51px;
+    min-height: 51px;
 }
 
 .second-argument {
-    height: 108px;
+    min-height: 108px;
 }
 
 .third-argument {
-    height: 84px;
+    min-height: 84px;
 }
 
 .fourth-argument {
-    height: 70px;
+    min-height: 70px;
 }
 
 .third-background-image {
@@ -462,10 +461,11 @@ h2 {
     z-index: 1;
     top: 218px;
     right: 118px;
+    background-size: contain;
 }
 
 .fourth-page {
-    height: 807px;
+    max-height: 807px;
 }
 
 .importants {
@@ -492,6 +492,7 @@ h2 {
     border-radius: 20px;
     filter: brightness(45%);
     opacity: 0.8;
+    background-size: contain;
 }
 
 .important-wrapper::before {
@@ -507,11 +508,14 @@ h2 {
     background-size: cover;
 }
 
-.first-important {
-    padding: 2px 0 0 2px;
+.important {
     display: flex;
     width: 568px;
     height: 203px;
+}
+
+.first-important {
+    padding: 2px 0 0 2px;
 }
 
 .first-important p {
@@ -519,12 +523,6 @@ h2 {
     font-size: 16px;
     font-weight: 450;
     line-height: 23px;
-}
-
-.second-important {
-    display: flex;
-    width: 568px;
-    height: 203px;
 }
 
 .second-important p {
@@ -536,9 +534,6 @@ h2 {
 
 .third-important {
     padding: 25px 0 0 50px;
-    display: flex;
-    width: 568px;
-    height: 203px;
 }
 
 .third-important p {
@@ -550,9 +545,6 @@ h2 {
 
 .fourth-important {
     padding: 25px 0 0 45px;
-    display: flex;
-    width: 568px;
-    height: 203px;
 }
 
 .fourth-important p {
@@ -640,12 +632,21 @@ h2 {
 
 .fifth-background-image {
     background-image: url('src/assets/img/background-fifth-section.jpg');
-    height: 715px;
+    /* position: relative;
     width: 1058px;
-    position: absolute;
-    z-index: 1;
+    height: 715px;
     top: 132px;
-    right: -361px;
+    right: 0; */
+    /* right: -351px; */
+
+    position: absolute;
+    width: 965px;
+    height: 726px;
+    top: 148px;
+    right: 0px;
+    box-shadow: 58px 4px 191px 47px #022335 inset,
+        58px 4px 191px 47px #043a41 inset;
+    z-index: 1;
 }
 
 .sixth-page {
@@ -963,6 +964,7 @@ h4 {
 
 .carousel-container {
     margin-top: 47px;
+    overflow: hidden;
 }
 
 .carousel-list {
