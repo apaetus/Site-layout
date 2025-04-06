@@ -1,0 +1,45 @@
+* {
+    font-family: 'Avenir Next Cyr';
+    color: white;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 102px;
+    margin: 0 auto;
+    padding-left: 3px;
+    letter-spacing: 3.6px;
+    background: linear-gradient(180deg, #ffffff 31.75%, #1a3031 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    display: inline-block;
+    margin: 107px 0 20px;
+    font-size: 54px;
+    font-weight: 450;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+button {
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}

@@ -1,9 +1,9 @@
 @media (max-width: 730px) {
     * {
-        max-width: 100%;
+        /* max-width: 100%;  */
+        /* margin: 0 auto; */
     }
     p {
-        margin: 0 auto;
         font-size: 16px;
     }
     .main {
@@ -12,14 +12,14 @@
     }
     h2,
     .blue-text {
-        font-size: 29px;
+        font-size: 8vw;
         text-align: left;
         width: 78vw;
         margin-top: 10px;
-        padding-right: 15px;
+        padding-right: 10px;
     }
     .first-page {
-        height: 91vh;
+        height: auto;
     }
     header {
         padding-top: 30px;
@@ -51,16 +51,16 @@
         display: none;
     }
     .greetings {
-        margin-top: 62px;
+        margin-top: 17vw;
     }
     .background-image {
         position: relative;
-        width: 100vw;
-        height: calc((726 / 965) * 95vw);
+        width: 100%;
+        height: calc((726 / 965) * 100%);
         top: -60px;
     }
     h1 {
-        font-size: 50px;
+        font-size: 13vw;
         padding-top: 9px;
         padding-left: 0;
         letter-spacing: 1px;
@@ -68,17 +68,19 @@
     .motivation-text {
         max-width: 100%;
         margin-top: 10px;
-        margin-left: 31px;
+        padding-left: 31px;
         text-align: left;
+        box-sizing: border-box;
     }
     .guarantee-container {
         justify-content: center;
-        margin-top: 56px;
+        margin-top: 58px;
         gap: 15px;
     }
     .vector-education {
         width: 49px;
         height: 49px;
+        margin: 0;
     }
     .img-edu {
         width: 28px;
@@ -86,15 +88,16 @@
     }
     .text-container {
         text-align: left;
-        max-width: 62vw;
+        max-width: 63vw;
+        margin: 0;
     }
     .guarantee-text {
         font-size: 14px;
     }
     .light-button {
         max-width: 83%;
-        margin-top: 14px;
-        margin-bottom: 7vh;
+        margin-top: 0;
+        margin-bottom: 2vh;
     }
     .reasons {
         display: flex;
@@ -121,7 +124,10 @@
         text-align: left;
     }
     .third-page {
-        padding-top: 39px;
+        padding: 4vh 0;
+    }
+    .art-inteligence {
+        margin-bottom: 3vw;
     }
     .arguments {
         width: 80vw;
@@ -129,30 +135,38 @@
         font-size: 14px;
     }
     .argument {
-        padding: 19px 18px 24px 25px;
+        max-width: 80vw;
+        padding: 7vw 0;
+    }
+    .argument img {
+        margin-left: 25px;
+        margin-right: 0;
     }
     .argument-text {
         font-size: 14px;
         text-align: left;
         padding-left: 18px;
+        width: 52vw;
+        line-height: 20px;
+    }
+    .fourth-argument {
+        margin-bottom: 0;
     }
     .third-background-image {
         position: relative;
-        height: calc((623 / 937) * 100vw);
-        width: 100vw;
+        height: calc((623 / 937) * 100%);
+        width: 100%;
         right: 0;
         top: 0;
     }
     .fourth-page {
         padding-top: 47px;
-        padding-bottom: 66px;
     }
     .importants {
         display: flex;
         flex-wrap: wrap;
         padding-top: 8px;
     }
-
     .important {
         width: 50%;
         flex-direction: column;
