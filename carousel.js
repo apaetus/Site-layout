@@ -13,8 +13,8 @@ export function initCarousel(carouselContainer) {
 
     function updateItemPosition() {
         carouselListNode.style.transform = `translateX(-${
-            currentItem * 407
-        }px)`;
+            currentItem * 21
+        }vw)`;
     }
 
     prevButtonNode.addEventListener('click', () => {

@@ -16,6 +16,16 @@ h1 {
     background: linear-gradient(180deg, #ffffff 31.75%, #1a3031 100%);
     background-clip: text;
     color: transparent;
+
+    @media (max-width: 1200px) {
+        font-size: 88px;
+    }
+    @media (max-width: 768px) {
+        font-size: 60px;
+    }
+    @media (max-width: 576px) {
+        font-size: 49px;
+    }
 }
 
 h2 {
@@ -26,6 +36,11 @@ h2 {
     color: #ffffff;
     text-transform: uppercase;
     width: 698px;
+
+    @media (max-width: 1200px) {
+        font-size: 43px;
+        width: 614px;
+    }
 }
 
 h5 {
@@ -37,6 +52,10 @@ p {
     margin: 0;
     padding: 0;
     font-size: 18px;
+
+    @media (max-width: 1200px) {
+        font-size: 16px;
+    }
 }
 
 button {
