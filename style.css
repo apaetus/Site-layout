@@ -47,6 +47,10 @@ header {
     @media (max-width: 1200px) {
         height: 65px;
     }
+
+    @media (max-width: 992px) {
+        height: 58px;
+    }
 }
 
 .tel-logo {
@@ -55,7 +59,6 @@ header {
 }
 
 .first-page {
-    height: 1003px;
     position: relative;
 }
 
@@ -66,6 +69,12 @@ header {
     flex-direction: column;
     align-items: center;
     z-index: 4;
+
+    @media (max-width: 992px) {
+        right: 19px;
+        left: auto;
+        bottom: 41vh;
+    }
 }
 
 .outer-circle {
@@ -76,6 +85,11 @@ header {
     height: 7vw;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
+
+    @media (max-width: 992px) {
+        width: 88px;
+        height: 88px;
+    }
 }
 
 .consultation-btn {
@@ -97,11 +111,21 @@ header {
     );
     border-radius: 50%;
     box-shadow: 0px 7px 20px -7px #00e0ff;
+
+    @media (max-width: 992px) {
+        width: 63px;
+        height: 63px;
+    }
 }
 
 .logo-headphone {
     width: 2vw;
     height: 2vw;
+
+    @media (max-width: 992px) {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 .text-consultation {
@@ -118,10 +142,14 @@ header {
     @media (max-width: 1200px) {
         transform: rotateZ(-90deg) translate(-17vw, 0);
     }
+    @media (max-width: 992px) {
+        display: none;
+    }
 }
 
 .greetings {
     margin-top: 155px;
+    margin-bottom: 168px;
 }
 
 .info {
@@ -137,6 +165,10 @@ header {
 .motivation-text {
     width: 580px;
     margin: 15px 0 8px;
+
+    @media (max-width: 992px) {
+        width: 420px;
+    }
 }
 
 .guarantee-container {
@@ -145,6 +177,10 @@ header {
     flex-direction: row;
     max-height: 89px;
     gap: 37px;
+
+    @media (max-width: 992px) {
+        gap: 15px;
+    }
 }
 
 .vector-education {
@@ -173,6 +209,11 @@ header {
     align-self: center;
     height: 86px;
     width: 470px;
+
+    @media (max-width: 992px) {
+        height: auto;
+        width: 387px;
+    }
 }
 
 .guarantee-edu-text {
@@ -259,11 +300,17 @@ header {
 
 .reasons {
     padding-top: 30px;
-    min-height: 449px;
+    min-height: 380px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+    margin-bottom: 115px;
+
+    @media (max-width: 1200px) {
+        gap: 15px;
+        width: 65vw;
+    }
 }
 
 .reason {
@@ -272,6 +319,13 @@ header {
     border-radius: 20px;
     padding: 2vw;
     box-sizing: border-box;
+}
+
+.reason-vector {
+    @media (max-width: 1200px) {
+        width: 35px;
+        height: 37px;
+    }
 }
 
 .top-row {
@@ -292,6 +346,10 @@ header {
         rgba(31, 77, 96, 0.43) 100%
     );
     border-radius: 20px;
+
+    @media (max-width: 992px) {
+        flex-basis: 19vw;
+    }
 }
 
 .reason-wrapper::before {
@@ -318,9 +376,12 @@ header {
 }
 
 .third-page {
-    min-height: 901px;
     padding-top: 12px;
     position: relative;
+}
+
+.art-inteligence {
+    margin-bottom: 113px;
 }
 
 .info-ai {
@@ -332,6 +393,10 @@ header {
     width: 689px;
     margin-top: 32px;
     margin-bottom: 45px;
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
 }
 
 .argument {
@@ -405,35 +470,22 @@ header {
     background-size: contain;
 }
 
-.fourth-page {
-    max-height: 807px;
-}
-
 .importants {
     padding-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-bottom: 30vh;
+    margin-bottom: 23vh;
 
     @media (max-width: 1200px) {
         display: flex;
         flex-wrap: wrap;
+        gap: 35px;
+    }
+
+    @media (max-width: 992px) {
         gap: 25px;
     }
-}
-
-.important-wrapper {
-    position: relative;
-    padding: 2px;
-    width: 15vw;
-    height: 10.5vw;
-    background: radial-gradient(
-        47.54% 111.62% at 50% 50%,
-        #49b9e8 0%,
-        rgba(31, 77, 96, 0.43) 100%
-    );
-    border-radius: 20px;
 }
 
 .third-important {
@@ -452,10 +504,21 @@ header {
     height: 203px;
 
     @media (max-width: 1200px) {
-        justify-content: space-between;
         padding: 0;
         flex-basis: 10vw;
         flex-grow: 1;
+        height: auto;
+        flex-direction: column;
+        justify-content: start;
+        gap: 15px;
+        align-items: start;
+    }
+}
+
+.third-important,
+.fourth-important {
+    @media (max-width: 1200px) {
+        flex-direction: column-reverse;
     }
 }
 
@@ -465,9 +528,28 @@ header {
     width: 12vw;
 
     @media (max-width: 1200px) {
-        font-size: 14px;
         line-height: 20px;
-        width: 14vw;
+        width: auto;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 14px;
+    }
+}
+
+.important-wrapper {
+    position: relative;
+    padding: 2px;
+    height: 10.5vw;
+    background: radial-gradient(
+        47.54% 111.62% at 50% 50%,
+        #49b9e8 0%,
+        rgba(31, 77, 96, 0.43) 100%
+    );
+    border-radius: 20px;
+
+    @media (max-width: 1200px) {
+        height: 20vw;
     }
 }
 
@@ -478,6 +560,11 @@ header {
     background-size: contain;
     width: 15vw;
     height: 10.5vw;
+
+    @media (max-width: 1200px) {
+        width: 28vw;
+        height: 20vw;
+    }
 }
 
 .important-wrapper::before {
@@ -494,12 +581,12 @@ header {
 }
 
 .fifth-page {
-    height: 889px;
     position: relative;
 }
 
 .our-course {
     position: relative;
+    margin-bottom: 138px;
 }
 
 .info-course {
@@ -518,6 +605,11 @@ header {
         width: 30px;
         height: 30px;
     }
+
+    @media (max-width: 992px) {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .advantage p {
@@ -529,6 +621,10 @@ header {
     @media (max-width: 1200px) {
         font-size: 15px;
         line-height: 20px;
+    }
+
+    @media (max-width: 992px) {
+        padding-top: 5px;
     }
 }
 
@@ -560,7 +656,7 @@ header {
 }
 
 .seventh-h2 {
-    width: 875px;
+    width: auto;
 }
 
 .chapters {
@@ -576,14 +672,17 @@ header {
     flex-direction: row;
     align-items: center;
     margin-bottom: 15px;
-    padding: 0 15px;
-    height: 56px;
+    padding: 11px 15px;
     background: linear-gradient(
         286.41deg,
         #073447 3.63%,
         #08262b 90.98%
     );
     border-radius: 6px;
+
+    @media (max-width: 992px) {
+        padding: 13px 15px;
+    }
 }
 
 .part-content {
@@ -623,6 +722,11 @@ header {
     font-weight: 450;
     line-height: 21px;
     color: #088f95;
+
+    @media (max-width: 992px) {
+        display: block;
+        margin: 0;
+    }
 }
 
 .accordion-btn {
@@ -787,7 +891,7 @@ h4 {
     display: flex;
     height: 100%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         flex-direction: column;
     }
 }
@@ -798,6 +902,10 @@ h4 {
     @media (max-width: 1200px) {
         margin-bottom: 22px;
         width: 342px;
+    }
+
+    @media (max-width: 992px) {
+        width: auto;
     }
 }
 
@@ -818,6 +926,10 @@ h4 {
 
     @media (max-width: 1200px) {
         width: 505px;
+    }
+
+    @media (max-width: 992px) {
+        width: auto;
     }
 }
 
@@ -847,6 +959,11 @@ h4 {
         padding-left: 44%;
         height: 41vw;
     }
+
+    @media (max-width: 992px) {
+        padding-left: 100%;
+        height: 53vw;
+    }
 }
 
 .author img {
@@ -862,6 +979,10 @@ h4 {
     @media (max-width: 1200px) {
         bottom: 30px;
         right: 1vw;
+    }
+
+    @media (max-width: 992px) {
+        right: 12vw;
     }
 }
 
@@ -883,7 +1004,6 @@ h4 {
 }
 
 .eighth-page {
-    max-height: 695px;
     padding-bottom: 96px;
     box-sizing: border-box;
 }
@@ -928,11 +1048,19 @@ h4 {
 
 .carousel-list {
     display: flex;
-    gap: 1vw;
+    gap: 20px;
     list-style-type: none;
     margin-top: 43px;
-    padding: 0 34%;
+    padding-left: 179px;
     transition: transform 0.3s ease-out;
+
+    @media (max-width: 1200px) {
+        padding-left: 136px;
+    }
+
+    @media (max-width: 992px) {
+        padding-left: 87px;
+    }
 }
 
 .carousel-img::before {
@@ -969,8 +1097,20 @@ h4 {
 
 .carousel-img {
     position: relative;
-    padding-top: 13vw;
-    padding-left: 20vw;
+    width: 387px;
+    height: 236px;
+
+    @media (max-width: 1200px) {
+        width: 343px;
+        height: 209px;
+        padding: 0;
+    }
+
+    @media (max-width: 992px) {
+        width: 299px;
+        height: 185px;
+        padding: 0;
+    }
 }
 
 .carousel-item p {
@@ -979,8 +1119,16 @@ h4 {
 
 .carousel-buttons {
     position: absolute;
-    top: 5vw;
+    top: 87px;
     width: 100%;
+
+    @media (max-width: 1200px) {
+        top: 78px;
+    }
+
+    @media (max-width: 992px) {
+        top: 66px;
+    }
 }
 
 .arrow-btn {
@@ -999,22 +1147,22 @@ h4 {
 }
 
 .arrow-left {
-    width: 4vw;
-    max-width: 62px;
-    height: 4vw;
-    max-height: 62px;
+    @media (max-width: 1200px) {
+        width: 52px;
+        height: 52px;
+    }
 }
 
 .arrow-right {
     transform: rotateZ(-180deg);
-    width: 4vw;
-    max-width: 62px;
-    height: 4vw;
-    max-height: 62px;
+
+    @media (max-width: 1200px) {
+        width: 52px;
+        height: 52px;
+    }
 }
 
 .ninth-page {
-    max-height: 670px;
     padding-bottom: 82px;
     box-sizing: border-box;
 }
@@ -1089,6 +1237,10 @@ footer {
     margin: 0;
     gap: 5px;
     list-style-type: none;
+
+    @media (max-width: 992px) {
+        gap: 27px;
+    }
 }
 
 .footer-text {
@@ -1098,6 +1250,10 @@ footer {
     font-weight: 600;
     letter-spacing: 0.12em;
     margin-right: 12px;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
 }
 
 .media-item {
@@ -1165,6 +1321,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 992px) {
+        top: -67px;
+        right: 12px;
+        left: auto;
+    }
 }
 
 .outer-circle-up {
@@ -1177,6 +1339,11 @@ footer {
     max-height: 139px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
+
+    @media (max-width: 992px) {
+        width: 93px;
+        height: 93px;
+    }
 }
 
 .up-btn {
@@ -1200,6 +1367,11 @@ footer {
     );
     border-radius: 50%;
     box-shadow: 0px 7px 20px -7px #00e0ff;
+
+    @media (max-width: 992px) {
+        width: 52px;
+        height: 52px;
+    }
 }
 
 .arrow-up {
@@ -1207,6 +1379,11 @@ footer {
     max-width: 16px;
     height: 2vw;
     max-height: 30px;
+
+    @media (max-width: 992px) {
+        height: 21px;
+        width: 12px;
+    }
 }
 
 .text-up {
@@ -1220,4 +1397,8 @@ footer {
     font-weight: 500;
     line-height: 12.25px;
     letter-spacing: 0.36em;
+
+    @media (max-width: 992px) {
+        display: none;
+    }
 }

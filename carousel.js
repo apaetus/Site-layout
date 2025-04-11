@@ -8,13 +8,19 @@ export function initCarousel(carouselContainer) {
     const nextButtonNode =
         carouselContainer.querySelector('.next-btn');
 
+    const slideWidth = carouselContainer
+        .querySelector('.carousel-list .carousel-item')
+        .getBoundingClientRect().width;
+    const GAP = 20;
+    const shiftSlide = slideWidth + GAP;
+
     let currentItem = 0;
     const totalItems = 4;
 
     function updateItemPosition() {
         carouselListNode.style.transform = `translateX(-${
-            currentItem * 21
-        }vw)`;
+            currentItem * shiftSlide
+        }px)`;
     }
 
     prevButtonNode.addEventListener('click', () => {
