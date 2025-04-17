@@ -1,21 +1,46 @@
 export function initCarousel(carouselContainer) {
     const carouselListNode =
         carouselContainer.querySelector('.carousel-list');
-    const carouselItemNode =
+    const carouselItemsNode =
         carouselContainer.querySelectorAll('.carousel-item');
     const prevButtonNode =
         carouselContainer.querySelector('.prev-btn');
     const nextButtonNode =
         carouselContainer.querySelector('.next-btn');
 
-    const slideWidth = carouselContainer
-        .querySelector('.carousel-list .carousel-item')
-        .getBoundingClientRect().width;
+    let slideWidth =
+        carouselItemsNode[0].getBoundingClientRect().width;
     const GAP = 20;
-    const shiftSlide = slideWidth + GAP;
+    let shiftSlide = slideWidth + GAP;
 
     let currentItem = 0;
-    const totalItems = 4;
+    const totalItems = carouselItemsNode.length;
+    let activeSlidesAmount = getActiveSlidesAmount();
+    const lastActiveSlideIndex = currentItem + activeSlidesAmount - 1;
+
+    function activateSlides() {
+        for (
+            let i = currentItem;
+            i <= carouselItemsNode.length;
+            i++
+        ) {
+            if (i <= lastActiveSlideIndex) {
+            }
+            carouselItemsNode[i].classList.add('active');
+        }
+    }
+
+    // кол-во активных слайдов
+    // нужно навесить на currentItem + activeSlidesAmount - 1      classList('active')
+    //
+
+    window.addEventListener('resize', () => {
+        slideWidth =
+            carouselItemsNode[0].getBoundingClientRect().width;
+
+        shiftSlide = slideWidth + GAP;
+        updateItemPosition();
+    });
 
     function updateItemPosition() {
         carouselListNode.style.transform = `translateX(-${
@@ -30,6 +55,7 @@ export function initCarousel(carouselContainer) {
             currentItem = totalItems - 1;
         }
         updateItemPosition();
+        activateSlides();
     });
 
     nextButtonNode.addEventListener('click', () => {
@@ -39,5 +65,10 @@ export function initCarousel(carouselContainer) {
             currentItem = 0;
         }
         updateItemPosition();
+        activateSlides();
     });
+}
+
+function getActiveSlidesAmount() {
+    return 2;
 }

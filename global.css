@@ -6,6 +6,10 @@
 body {
     margin: 0 auto;
     max-width: 100%;
+
+    @media (max-width: 992px) {
+        text-align: center;
+    }
 }
 
 h1 {
@@ -21,13 +25,21 @@ h1 {
         font-size: 88px;
     }
     @media (max-width: 992px) {
+        padding-left: 0;
         font-size: 70px;
     }
 
     @media (max-width: 768px) {
-        font-size: 48px;
-        padding-top: 10px;
+        margin-top: 30px;
         letter-spacing: 1.3px;
+    }
+
+    @media (max-width: 530px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 40px;
     }
 }
 
