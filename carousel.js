@@ -19,6 +19,8 @@ export function initCarousel(carouselContainer) {
     const lastActiveSlideIndex = currentItem + activeSlidesAmount - 1;
 
     function activateSlides() {
+        carouselItemsNode[currentItem].classList.add('active');
+
         for (
             let i = currentItem;
             i <= carouselItemsNode.length;

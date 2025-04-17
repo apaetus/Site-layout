@@ -1290,7 +1290,7 @@ header {
     box-sizing: border-box;
 
     @media (max-width: 768px) {
-        padding-bottom: 97px;
+        padding-bottom: 120px;
     }
 }
 
@@ -1302,7 +1302,7 @@ header {
 .announcement-carousel h2 {
     margin-top: 98px;
     margin-bottom: 30px;
-    width: 40vw;
+    width: 68%;
 
     @media (max-width: 992px) {
         width: auto;
@@ -1348,14 +1348,14 @@ header {
     @media (max-width: 992px) {
         top: auto;
         bottom: -60px;
-        right: 40%;
-
+        right: 36%;
+        left: 36%;
         height: 30px;
     }
 
-    @media (max-width: 650px) {
-        left: 20%;
-        right: 20%;
+    @media (max-width: 600px) {
+        right: 23%;
+        left: 23%;
     }
 }
 
@@ -1365,11 +1365,11 @@ header {
     width: 1200px;
 
     @media (max-width: 1550px) {
-        width: 700px;
+        width: 794px;
     }
 
     @media (max-width: 992px) {
-        width: 530px;
+        width: 618px;
     }
 
     @media (max-width: 768px) {
@@ -1428,10 +1428,6 @@ header {
     width: 387px;
     padding-bottom: 61%;
 
-    @media (max-width: 1200px) {
-        width: 343px;
-    }
-
     @media (max-width: 992px) {
         width: 299px;
     }
@@ -1463,12 +1459,8 @@ header {
     top: 87px;
     width: 100%;
 
-    @media (max-width: 1200px) {
-        top: 78px;
-    }
-
     @media (max-width: 992px) {
-        top: 66px;
+        top: 70px;
     }
 
     @media (max-width: 768px) {
@@ -1482,11 +1474,6 @@ header {
     border: none;
     padding: 0;
 
-    @media (max-width: 1200px) {
-        width: 52px;
-        height: 52px;
-    }
-
     @media (max-width: 768px) {
         width: 43px;
         height: 43px;
@@ -1495,32 +1482,24 @@ header {
 
 .prev-btn {
     left: 0;
-
-    /* @media (max-width: 768px) {
-        left: -22px;
-    } */
 }
 
 .next-btn {
     right: 0;
-
-    /* @media (max-width: 768px) {
-        right: -18px;
-    } */
 }
 
 .arrow-left {
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
         width: 43px;
-        height: 43px;
+        height: 42px;
     }
 }
 
 .arrow-right {
     transform: rotateZ(-180deg);
 
-    @media (max-width: 768px) {
-        width: 43px;
+    @media (max-width: 992px) {
+        width: 42px;
         height: 42px;
     }
 }
@@ -1530,7 +1509,7 @@ header {
     box-sizing: border-box;
 
     @media (max-width: 768px) {
-        padding-bottom: 119px;
+        padding-bottom: 120px;
     }
 }
 
