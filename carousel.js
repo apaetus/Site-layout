@@ -15,26 +15,20 @@ export function initCarousel(carouselContainer) {
 
     let currentItem = 0;
     const totalItems = carouselItemsNode.length;
-    let activeSlidesAmount = getActiveSlidesAmount();
-    const lastActiveSlideIndex = currentItem + activeSlidesAmount - 1;
+
+    activateSlides();
 
     function activateSlides() {
-        carouselItemsNode[currentItem].classList.add('active');
-
-        for (
-            let i = currentItem;
-            i <= carouselItemsNode.length;
-            i++
-        ) {
-            if (i <= lastActiveSlideIndex) {
+        const activeSlidesAmount = getActiveSlidesAmount();
+        const lastActiveSlide = currentItem + activeSlidesAmount - 1;
+        for (let i = 0; i < totalItems; i++) {
+            if (i < currentItem || i > lastActiveSlide) {
+                carouselItemsNode[i].classList.remove('active');
+            } else {
+                carouselItemsNode[i].classList.add('active');
             }
-            carouselItemsNode[i].classList.add('active');
         }
     }
-
-    // кол-во активных слайдов
-    // нужно навесить на currentItem + activeSlidesAmount - 1      classList('active')
-    //
 
     window.addEventListener('resize', () => {
         slideWidth =
@@ -42,6 +36,7 @@ export function initCarousel(carouselContainer) {
 
         shiftSlide = slideWidth + GAP;
         updateItemPosition();
+        activateSlides();
     });
 
     function updateItemPosition() {
@@ -72,5 +67,8 @@ export function initCarousel(carouselContainer) {
 }
 
 function getActiveSlidesAmount() {
+    if (document.documentElement.clientWidth > 1550) {
+        return 3;
+    }
     return 2;
 }
