@@ -9,13 +9,6 @@
     font-display: swap;
 }
 
-* {
-    font-family: 'Avenir Next Cyr';
-    color: white;
-}
-
-p {
-    margin: 0;
+ul {
     padding: 0;
-    font-size: 18px;
 }

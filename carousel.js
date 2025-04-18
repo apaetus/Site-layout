@@ -1,32 +1,76 @@
-const carouselListNode = document.querySelector('.carousel-list');
-const carouselItemNode = document.querySelectorAll('.carousel-item');
-const prevButtonNode = document.querySelector('.prev-btn');
-const nextButtonNode = document.querySelector('.next-btn');
-const buttonsNode = document.querySelector('.carousel-buttons');
+export function initCarousel(carouselContainer) {
+    const carouselListNode =
+        carouselContainer.querySelector('.carousel-list');
+    const carouselItemsNode =
+        carouselContainer.querySelectorAll('.carousel-item');
+    const prevButtonNode =
+        carouselContainer.querySelector('.prev-btn');
+    const nextButtonNode =
+        carouselContainer.querySelector('.next-btn');
 
-let currentItem = 0;
-const totalItems = 4;
+    let slideWidth =
+        carouselItemsNode[0].getBoundingClientRect().width;
+    const GAP = 20;
+    let shiftSlide = slideWidth + GAP;
 
-function updateItemPosition() {
-    carouselListNode.style.transform = `translateX(-${
-        currentItem * 34
-    }%)`;
+    let currentItem = 0;
+    const totalItems = carouselItemsNode.length;
+    let activeSlidesAmount = getActiveSlidesAmount();
+    const lastActiveSlideIndex = currentItem + activeSlidesAmount - 1;
+
+    function activateSlides() {
+        carouselItemsNode[currentItem].classList.add('active');
+
+        for (
+            let i = currentItem;
+            i <= carouselItemsNode.length;
+            i++
+        ) {
+            if (i <= lastActiveSlideIndex) {
+            }
+            carouselItemsNode[i].classList.add('active');
+        }
+    }
+
+    // кол-во активных слайдов
+    // нужно навесить на currentItem + activeSlidesAmount - 1      classList('active')
+    //
+
+    window.addEventListener('resize', () => {
+        slideWidth =
+            carouselItemsNode[0].getBoundingClientRect().width;
+
+        shiftSlide = slideWidth + GAP;
+        updateItemPosition();
+    });
+
+    function updateItemPosition() {
+        carouselListNode.style.transform = `translateX(-${
+            currentItem * shiftSlide
+        }px)`;
+    }
+
+    prevButtonNode.addEventListener('click', () => {
+        if (currentItem > 0) {
+            currentItem--;
+        } else {
+            currentItem = totalItems - 1;
+        }
+        updateItemPosition();
+        activateSlides();
+    });
+
+    nextButtonNode.addEventListener('click', () => {
+        if (currentItem < totalItems - 1) {
+            currentItem++;
+        } else {
+            currentItem = 0;
+        }
+        updateItemPosition();
+        activateSlides();
+    });
 }
 
-prevButtonNode.addEventListener('click', (event) => {
-    if (currentItem > 0) {
-        currentItem--;
-    } else {
-        currentItem = totalItems - 1;
-    }
-    updateItemPosition();
-});
-
-nextButtonNode.addEventListener('click', () => {
-    if (currentItem < totalItems - 1) {
-        currentItem++;
-    } else {
-        currentItem = 0;
-    }
-    updateItemPosition();
-});
+function getActiveSlidesAmount() {
+    return 2;
+}
