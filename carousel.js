@@ -72,5 +72,8 @@ export function initCarousel(carouselContainer) {
 }
 
 function getActiveSlidesAmount() {
+    if (document.documentElement.clientWidth > 1350) {
+        return 3;
+    }
     return 2;
 }
