@@ -1,0 +1,111 @@
+* {
+    font-family: 'Avenir Next Cyr';
+    color: white;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media (max-width: 992px) {
+        text-align: center;
+    }
+}
+
+h1 {
+    font-size: 102px;
+    margin: 0 auto;
+    padding-left: 3px;
+    letter-spacing: 3.6px;
+    background: linear-gradient(180deg, #ffffff 31.75%, #1a3031 100%);
+    background-clip: text;
+    color: transparent;
+
+    @media (max-width: 1200px) {
+        font-size: 88px;
+    }
+    @media (max-width: 992px) {
+        padding-left: 0;
+        font-size: 70px;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: 30px;
+        letter-spacing: 1.3px;
+    }
+
+    @media (max-width: 530px) {
+        font-size: 48px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    display: inline-block;
+    margin: 106px 0 20px;
+    font-size: 50px;
+    font-weight: 450;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 698px;
+
+    @media (max-width: 1350px) {
+        font-size: 43px;
+        width: 614px;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 35px;
+        width: 454px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+        width: 100%;
+        margin-top: 37px;
+    }
+}
+
+h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 750;
+    line-height: 21px;
+    color: #4abcec;
+
+    @media (max-width: 1200px) {
+        font-size: 14px;
+        padding-top: 4px;
+    }
+}
+
+h5 {
+    font-size: 14px;
+    letter-spacing: 1.6px;
+    margin: 30px 0 21px 0;
+
+    @media (max-width: 768px) {
+        font-size: 13px;
+        margin: 17px 2px;
+        line-height: 21px;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+
+    @media (max-width: 1200px) {
+        font-size: 16px;
+    }
+}
+
+button {
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}
