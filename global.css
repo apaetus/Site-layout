@@ -46,13 +46,13 @@ h1 {
 h2 {
     display: inline-block;
     margin: 106px 0 20px;
-    font-size: 54px;
+    font-size: 50px;
     font-weight: 450;
     color: #ffffff;
     text-transform: uppercase;
     width: 698px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1350px) {
         font-size: 43px;
         width: 614px;
     }
