@@ -1413,10 +1413,15 @@ header {
 }
 
 .carousel-list {
+    position: relative;
     margin: 0;
     display: flex;
+    left: -1221px;
     gap: 20px;
     list-style-type: none;
+}
+
+.carousel-list.active {
     transition: transform 0.3s ease-out;
 }
 
@@ -1475,7 +1480,7 @@ header {
 }
 
 .carousel-item {
-    opacity: 0.8;
+    opacity: 0.3;
     transition: opacity 0.2s ease-out;
 
     @media (max-width: 768px) {
@@ -1573,7 +1578,6 @@ header {
 
     @media (max-width: 768px) {
         margin-top: 56px;
-        /* margin-bottom: 13px; */
     }
 }
 
