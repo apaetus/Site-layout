@@ -1,35 +1,47 @@
 export function initCarousel(carouselContainer) {
     const carouselListNode =
         carouselContainer.querySelector('.carousel-list');
-    const carouselItemsNode =
-        carouselContainer.querySelectorAll('.carousel-item');
+
     const prevButtonNode =
         carouselContainer.querySelector('.prev-btn');
     const nextButtonNode =
         carouselContainer.querySelector('.next-btn');
 
+    const initialCarouselItemsNode = carouselListNode.children;
+
+    let listWidth = carouselListNode.getBoundingClientRect().width;
     let slideWidth =
-        carouselItemsNode[0].getBoundingClientRect().width;
+        initialCarouselItemsNode[0].getBoundingClientRect().width;
     const GAP = 20;
     let shiftSlide = slideWidth + GAP;
 
     let currentItem = 0;
-    let totalItems = carouselItemsNode.length;
-    let activeSlidesAmount = 3;
 
-    const firstItem = carouselItemsNode[0];
-    const secondItem = carouselItemsNode[1];
-    const secondLastItem =
-        carouselItemsNode[carouselItemsNode.length - 2];
-    const lastItem = carouselItemsNode[carouselItemsNode.length - 1];
+    let initialTotalItems = initialCarouselItemsNode.length;
+    let activeSlidesAmount = getActiveSlidesAmount();
+    let lastActiveSlide = currentItem + activeSlidesAmount - 1;
 
-    firstItem.before(secondItem.cloneNode(true));
-    firstItem.before(secondLastItem.cloneNode(true));
-    firstItem.before(lastItem.cloneNode(true));
-    lastItem.after(secondLastItem.cloneNode(true));
-    lastItem.after(secondItem.cloneNode(true));
-    lastItem.after(firstItem.cloneNode(true));
+    const firstItem = initialCarouselItemsNode[0];
+    const lastItem =
+        initialCarouselItemsNode[initialCarouselItemsNode.length - 1];
+    const copyItems = [...initialCarouselItemsNode].slice();
+    const sideSlidesAmount = copyItems.length;
 
+    for (
+        let i = 0, j = initialTotalItems - 1;
+        i < initialTotalItems, j >= 0;
+        i++, j--
+    ) {
+        firstItem.before(copyItems[i].cloneNode(true));
+        lastItem.after(copyItems[j].cloneNode(true));
+    }
+
+    const updateCarouselItemsNode =
+        carouselContainer.querySelectorAll('.carousel-item');
+    const updateTotalItems = updateCarouselItemsNode.length;
+
+    enableAnimation();
+    initListPosition();
     activateSlides();
 
     function moveSlides(direction) {
@@ -38,21 +50,15 @@ export function initCarousel(carouselContainer) {
         } else {
             currentItem += 1;
         }
-        carouselListNode.classList.add('active');
 
-        if (currentItem < 0 || currentItem > totalItems - 1) {
-            carouselListNode.style.transform = `translate(-${
-                shiftSlide * (currentItem + 1)
-            }px)`;
-            carouselListNode.classList.remove('active');
-            currentItem = currentItem < 0 ? totalItems : 0;
-        }
-
-        carouselListNode.style.transform = `translateX(-${
-            currentItem * shiftSlide
+        carouselListNode.classList.add('animation');
+        carouselListNode.style.transform = `translateX(${
+            -1 * shiftSlide * (currentItem + sideSlidesAmount)
         }px)`;
 
         activateSlides();
+        moveList();
+        enableAnimation();
     }
 
     prevButtonNode.addEventListener('click', () => {
@@ -63,30 +69,77 @@ export function initCarousel(carouselContainer) {
         moveSlides('right');
     });
 
-    function activateSlides() {
-        activeSlidesAmount = getActiveSlidesAmount();
-        const lastActiveSlide = currentItem + activeSlidesAmount - 1;
-        for (let i = 0; i < totalItems; i++) {
-            carouselItemsNode[i].classList.remove('active');
-            if (i >= currentItem && i <= lastActiveSlide) {
-                carouselItemsNode[i].classList.add('active');
-            }
-        }
-    }
-
     window.addEventListener('resize', () => {
         slideWidth =
-            carouselItemsNode[0].getBoundingClientRect().width;
-
+            updateCarouselItemsNode[0].getBoundingClientRect().width;
         shiftSlide = slideWidth + GAP;
-        updateItemPosition();
+        listWidth = carouselListNode.getBoundingClientRect().width;
+        console.log('resize');
+        initListPosition();
         activateSlides();
     });
 
-    function getActiveSlidesAmount() {
-        if (document.documentElement.clientWidth > 1350) {
-            return 3;
+    function moveList() {
+        if (currentItem < 0 || currentItem >= initialTotalItems) {
+            setTimeout(() => {
+                carouselListNode.classList.remove('animation');
+
+                for (let i = 0; i < updateTotalItems; i++) {
+                    updateCarouselItemsNode[i].classList.remove(
+                        'animation'
+                    );
+                }
+
+                currentItem =
+                    currentItem < 0
+                        ? currentItem + initialTotalItems
+                        : currentItem - initialTotalItems;
+
+                carouselListNode.style.transform = `translate(${
+                    -1 * shiftSlide * (currentItem + sideSlidesAmount)
+                }px)`;
+                activateSlides();
+            }, 300);
         }
-        return 2;
+    }
+
+    function enableAnimation() {
+        setTimeout(() => {
+            for (let i = 0; i < updateTotalItems; i++) {
+                updateCarouselItemsNode[i].classList.add('animation');
+            }
+        }, 400);
+    }
+
+    function initListPosition() {
+        carouselListNode.style.transform = `translate(${
+            -1 * shiftSlide * sideSlidesAmount
+        }px)`;
+    }
+
+    function getActiveSlidesAmount() {
+        const maxVisibleSlidesAmount = Math.floor(
+            listWidth / shiftSlide
+        );
+
+        return shiftSlide * maxVisibleSlidesAmount + slideWidth <=
+            listWidth
+            ? maxVisibleSlidesAmount + 1
+            : maxVisibleSlidesAmount;
+    }
+
+    function activateSlides() {
+        activeSlidesAmount = getActiveSlidesAmount();
+        lastActiveSlide = currentItem + activeSlidesAmount - 1;
+        for (let i = 0; i < updateTotalItems - 1; i++) {
+            updateCarouselItemsNode[i].classList.remove('active');
+
+            if (
+                i >= currentItem + sideSlidesAmount &&
+                i <= lastActiveSlide + sideSlidesAmount
+            ) {
+                updateCarouselItemsNode[i].classList.add('active');
+            }
+        }
     }
 }

@@ -138,7 +138,7 @@ header {
     height: 70px;
     background-image: linear-gradient(
         180deg,
-        /* #26FFFF */ rgba(3, 225, 255, 0.86) 0%,
+        rgba(3, 225, 255, 0.86) 0%,
         #13cdc2 100%
     );
     border-radius: 50%;
@@ -353,7 +353,7 @@ header {
 }
 
 .welcome-background-image {
-    background: url(src/assets/img/welcome-background.jpg) no-repeat
+    background: url('src/assets/img/welcome-background.jpg') no-repeat
         left / contain;
     position: absolute;
     width: 48vw;
@@ -643,8 +643,8 @@ header {
 }
 
 .arguments-background-image {
-    background: url(src/assets/img/arguments-background.jpg) no-repeat
-        right / contain;
+    background: url('src/assets/img/arguments-background.jpg')
+        no-repeat right / contain;
     position: absolute;
     width: 1049px;
     height: 79%;
@@ -1348,7 +1348,6 @@ header {
 
     @media (max-width: 768px) {
         margin-top: 57px;
-        /* margin-bottom: 16px; */
     }
 }
 
@@ -1416,12 +1415,11 @@ header {
     position: relative;
     margin: 0;
     display: flex;
-    left: -1221px;
     gap: 20px;
     list-style-type: none;
 }
 
-.carousel-list.active {
+.carousel-list.animation {
     transition: transform 0.3s ease-out;
 }
 
@@ -1459,7 +1457,7 @@ header {
 
 .carousel-img {
     position: relative;
-    width: 387px;
+    width: 386px;
     padding-bottom: 61%;
 
     @media (max-width: 1500px) {
@@ -1481,11 +1479,14 @@ header {
 
 .carousel-item {
     opacity: 0.3;
-    transition: opacity 0.2s ease-out;
 
     @media (max-width: 768px) {
         min-width: 100%;
     }
+}
+
+.carousel-item.animation {
+    transition: opacity 0.3s;
 }
 
 .carousel-item.active {
