@@ -18,8 +18,6 @@ export function initCarousel(carouselContainer) {
     let currentItem = 0;
 
     let initialTotalItems = initialCarouselItemsNode.length;
-    let activeSlidesAmount = getActiveSlidesAmount();
-    let lastActiveSlide = currentItem + activeSlidesAmount - 1;
 
     const firstItem = initialCarouselItemsNode[0];
     const lastItem =
@@ -40,11 +38,9 @@ export function initCarousel(carouselContainer) {
         carouselContainer.querySelectorAll('.carousel-item');
     const updateTotalItems = updateCarouselItemsNode.length;
 
-    enableAnimation();
-    initListPosition();
-    activateSlides();
+    moveSlides();
 
-    function moveSlides(direction) {
+    function moveCarousel(direction) {
         if (direction === 'left') {
             currentItem -= 1;
         } else {
@@ -52,21 +48,17 @@ export function initCarousel(carouselContainer) {
         }
 
         carouselListNode.classList.add('animation');
-        carouselListNode.style.transform = `translateX(${
-            -1 * shiftSlide * (currentItem + sideSlidesAmount)
-        }px)`;
 
-        activateSlides();
+        moveSlides();
         moveList();
-        enableAnimation();
     }
 
     prevButtonNode.addEventListener('click', () => {
-        moveSlides('left');
+        moveCarousel('left');
     });
 
     nextButtonNode.addEventListener('click', () => {
-        moveSlides('right');
+        moveCarousel('right');
     });
 
     window.addEventListener('resize', () => {
@@ -74,13 +66,11 @@ export function initCarousel(carouselContainer) {
             updateCarouselItemsNode[0].getBoundingClientRect().width;
         shiftSlide = slideWidth + GAP;
         listWidth = carouselListNode.getBoundingClientRect().width;
-        console.log('resize');
-        initListPosition();
-        activateSlides();
+        moveSlides();
     });
 
     function moveList() {
-        if (currentItem < 0 || currentItem >= initialTotalItems) {
+        if (currentItem < 0 || currentItem >= initialTotalItems - 1) {
             setTimeout(() => {
                 carouselListNode.classList.remove('animation');
 
@@ -95,10 +85,7 @@ export function initCarousel(carouselContainer) {
                         ? currentItem + initialTotalItems
                         : currentItem - initialTotalItems;
 
-                carouselListNode.style.transform = `translate(${
-                    -1 * shiftSlide * (currentItem + sideSlidesAmount)
-                }px)`;
-                activateSlides();
+                moveSlides();
             }, 300);
         }
     }
@@ -111,10 +98,12 @@ export function initCarousel(carouselContainer) {
         }, 400);
     }
 
-    function initListPosition() {
+    function moveSlides() {
         carouselListNode.style.transform = `translate(${
-            -1 * shiftSlide * sideSlidesAmount
+            -1 * shiftSlide * (currentItem + sideSlidesAmount)
         }px)`;
+        activateSlides();
+        enableAnimation();
     }
 
     function getActiveSlidesAmount() {
@@ -129,8 +118,8 @@ export function initCarousel(carouselContainer) {
     }
 
     function activateSlides() {
-        activeSlidesAmount = getActiveSlidesAmount();
-        lastActiveSlide = currentItem + activeSlidesAmount - 1;
+        const activeSlidesAmount = getActiveSlidesAmount();
+        const lastActiveSlide = currentItem + activeSlidesAmount - 1;
         for (let i = 0; i < updateTotalItems - 1; i++) {
             updateCarouselItemsNode[i].classList.remove('active');
 

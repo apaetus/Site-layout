@@ -410,7 +410,7 @@ header {
 }
 
 .light-button:hover {
-    transform: translateY(2px);
+    transform: translateY(1px);
     box-shadow: 3px 3px 3px #011113, inset -5px -5px 8px -4px #021312,
         -1px -1px 6px #52e1f4, inset 5px 5px 8px -4px #c2ffff;
 
@@ -418,7 +418,7 @@ header {
 }
 
 .light-button:active {
-    transform: translateY(2px);
+    transform: translateY(1px);
     opacity: 0.9;
     box-shadow: 3px 3px 3px #011113, inset 6px 6px 11px 0 #076673,
         -1px -1px 6px #52e1f4, inset -6px -6px 11px 0 #7cf3eb;
